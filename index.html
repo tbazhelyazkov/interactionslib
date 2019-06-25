@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<title>AnimateLib</title>
+<meta description="" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+<link href="css/aa-generic.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="css/aa-style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div id="menuButtons">
+        <h2>Hamburger buttons</h2>
+        <p class="message info">Hover the button to see the animation.</p>
+        <ul class="unstyled">
+            <li>
+                <button class="aa hamburger regClose">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <span class="sub">Regular close</span>
+                <div class="tabs source">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'html1')">Html</button>
+                        <button class="tablinks" onclick="openTab(event, 'css1')">Css</button>
+                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                    </div>
+                    <div id="x" class="tabcontent"></div>
+                    <div id="html1" class="tabcontent code">
+                        <h3>HTML</h3>
+                        <code>
+                            &lt;button class="aa hamburger regClose"&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;/button&gt;
+                        </code>
+                    </div>
+                    <div id="css1" class="tabcontent code">
+                        <h3>Cascading Style Sheets</h3>
+                        <code>
+                            .aa.hamburger {<br>
+                                width: 3rem;<br>
+                                height: 1.75rem;<br>
+                                position: relative;<br>
+                                display: block;<br>
+                                background: transparent;<br>
+                                border: 0;<br>
+                                cursor: pointer;<br>
+                            }<br>
+                            .aa.hamburger span {<br>
+                                display: block;<br>
+                                background: #000;<br>
+                                width: 100%;<br>
+                                height: 0.4rem;<br>
+                                position: absolute;<br>
+                                left: 0;<br>
+                                border-radius: 0.25rem;<br>
+                                transition: all 0.4s;<br>
+                            }<br>
+                            .aa.hamburger span:nth-child(1) { top: 0; }<br>
+                            .aa.hamburger span:nth-child(2) { top: 50%; }<br>
+                            .aa.hamburger span:nth-child(3) { top: 100%; }<br>
+                            .aa.hamburger:hover span:nth-child(1) { transform: translateY(-0.2rem); }<br>
+                            .aa.hamburger:hover span:nth-child(3) { transform: translateY(0.2rem); }<br>
+                            /* hamburger regular close */<br>
+                            .aa.hamburger.regClose.active span:nth-child(1) {<br>
+                                transform: translateY(0.85rem) translateX(0) rotate(45deg);<br>
+                            }<br>
+                            .aa.hamburger.regClose.active span:nth-child(2) { opacity: 0; }<br>
+                            .aa.hamburger.regClose.active span:nth-child(3) {<br>
+                                transform: translateY(-0.85rem) translateX(0) rotate(-45deg);<br>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="aa hamburger arrowLeft">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <span class="sub">Arrow left</span>
+                <div class="tabs source">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'html2')">Html</button>
+                        <button class="tablinks" onclick="openTab(event, 'css2')">Css</button>
+                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                    </div>
+                    <div id="x" class="tabcontent"></div>
+                    <div id="html2" class="tabcontent code">
+                        <h3>HTML</h3>
+                        <code>
+                            &lt;button class="aa hamburger regClose"&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;/button&gt;
+                        </code>
+                    </div>
+                    <div id="css2" class="tabcontent code">
+                        <h3>Cascading Style Sheets</h3>
+                        <code>
+                            .aa.hamburger {<br>
+                                width: 3rem;<br>
+                                height: 1.75rem;<br>
+                                position: relative;<br>
+                                display: block;<br>
+                                background: transparent;<br>
+                                border: 0;<br>
+                                cursor: pointer;<br>
+                            }<br>
+                            .aa.hamburger span {<br>
+                                display: block;<br>
+                                background: #000;<br>
+                                width: 100%;<br>
+                                height: 0.4rem;<br>
+                                position: absolute;<br>
+                                left: 0;<br>
+                                border-radius: 0.25rem;<br>
+                                transition: all 0.4s;<br>
+                            }<br>
+                            .aa.hamburger span:nth-child(1) { top: 0; }<br>
+                            .aa.hamburger span:nth-child(2) { top: 50%; }<br>
+                            .aa.hamburger span:nth-child(3) { top: 100%; }<br>
+                            .aa.hamburger:hover span:nth-child(1) { transform: translateY(-0.2rem); }<br>
+                            .aa.hamburger:hover span:nth-child(3) { transform: translateY(0.2rem); }<br>
+                            /* hamburger-arrow-left */<br>
+                            .aa.hamburger.arrowLeft.active span:nth-child(1) {<br>
+                                transform: translate3d(-0.8rem, 0, 0) rotate(-45deg) scale(0.7, 1) translateY(0.25rem);<br>
+                            }<br>
+                            .aa.hamburger.arrowLeft.active span:nth-child(3) {<br>
+                                transform: translate3d(-0.8rem, 0, 0) rotate(45deg) scale(0.7, 1) translateY(-0.25rem);<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="aa hamburger arrowDown">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <span class="sub">Arrow down</span>
+                <div class="tabs source">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'html3')">Html</button>
+                        <button class="tablinks" onclick="openTab(event, 'css3')">Css</button>
+                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                    </div>
+                    <div id="x" class="tabcontent"></div>
+                    <div id="html3" class="tabcontent code">
+                        <h3>HTML</h3>
+                        <code>
+                            &lt;button class="aa hamburger arrowDown"&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;/button&gt;
+                        </code>
+                    </div>
+                    <div id="css3" class="tabcontent code">
+                        <h3>Cascading Style Sheets</h3>
+                        <code>
+                            .aa.hamburger {<br>
+                                width: 3rem;<br>
+                                height: 1.75rem;<br>
+                                position: relative;<br>
+                                display: block;<br>
+                                background: transparent;<br>
+                                border: 0;<br>
+                                cursor: pointer;<br>
+                            }<br>
+                            .aa.hamburger span {<br>
+                                display: block;<br>
+                                background: #000;<br>
+                                width: 100%;<br>
+                                height: 0.4rem;<br>
+                                position: absolute;<br>
+                                left: 0;<br>
+                                border-radius: 0.25rem;<br>
+                                transition: all 0.4s;<br>
+                            }<br>
+                            .aa.hamburger span:nth-child(1) { top: 0; }<br>
+                            .aa.hamburger span:nth-child(2) { top: 50%; }<br>
+                            .aa.hamburger span:nth-child(3) { top: 100%; }<br>
+                            .aa.hamburger:hover span:nth-child(1) { transform: translateY(-0.2rem); }<br>
+                            .aa.hamburger:hover span:nth-child(3) { transform: translateY(0.2rem); }<br>
+                            /* hamburger-arrow-down */<br>
+                            .aa.hamburger.arrowDown.active span:nth-child(1) {<br>
+                                transform: translate3d(-0.8rem, 0, 0) rotate(-45deg) scale(0.7, 1) translateY(0.25rem);<br>
+                            }<br>
+                            .aa.hamburger.arrowDown.active span:nth-child(3) {<br>
+                                transform: translate3d(-0.8rem, 0, 0) rotate(45deg) scale(0.7, 1) translateY(-0.25rem);<br>
+                            }<br>
+                            .aa.hamburger.arrowDown span:nth-child(2) { transition: transform 0.4s; transform: rotate(0); }<br>
+                            .aa.hamburger.arrowDown.active span:nth-child(2) { transform: rotate(-180deg); }<br>
+                            .aa.hamburger.arrowDown.active { transform: rotate(-90deg); }<br>
+                        </code>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="aa hamburger spin">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <span class="sub">Rotate</span>
+                <div class="tabs source">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'html4')">Html</button>
+                        <button class="tablinks" onclick="openTab(event, 'css4')">Css</button>
+                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                    </div>
+                    <div id="x" class="tabcontent"></div>
+                    <div id="html4" class="tabcontent code">
+                        <h3>HTML</h3>
+                        <code>
+                            &lt;button class="aa hamburger spin"&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;/button&gt;
+                        </code>
+                    </div>
+                    <div id="css4" class="tabcontent code">
+                        <h3>Cascading Style Sheets</h3>
+                        <code>
+                            .aa.hamburger {<br>
+                                width: 3rem;<br>
+                                height: 1.75rem;<br>
+                                position: relative;<br>
+                                display: block;<br>
+                                background: transparent;<br>
+                                border: 0;<br>
+                                cursor: pointer;<br>
+                            }<br>
+                            .aa.hamburger span {<br>
+                                display: block;<br>
+                                background: #000;<br>
+                                width: 100%;<br>
+                                height: 0.4rem;<br>
+                                position: absolute;<br>
+                                left: 0;<br>
+                                border-radius: 0.25rem;<br>
+                                transition: all 0.4s;<br>
+                            }<br>
+                            .aa.hamburger span:nth-child(1) { top: 0; }<br>
+                            .aa.hamburger span:nth-child(2) { top: 50%; }<br>
+                            .aa.hamburger span:nth-child(3) { top: 100%; }<br>
+                            .aa.hamburger:hover span:nth-child(1) { transform: translateY(-0.2rem); }<br>
+                            .aa.hamburger:hover span:nth-child(3) { transform: translateY(0.2rem); }<br>
+                            /* hamburger spin */<br>
+                            .aa.hamburger.spin.active span:nth-child(1) {<br>
+                                bottom: 0;<br>
+                                opacity: 0;<br>
+                                transition: bottom 0.1s ease-out, opacity 0.1s 0.12s ease-out;<br>
+                            }<br>
+                            .aa.hamburger.spin.active span:nth-child(2) {<br>
+                                transform: rotate(225deg);<br>
+                                transition-delay: 0.22s;<br>
+                                top: 1rem;<br>
+                                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);<br>
+                            }<br>
+                            .aa.hamburger.spin.active span:nth-child(3) {<br>
+                                top: 1.1rem;<br>
+                                transform: rotate(-225deg);<br>
+                                transition: top 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button class="aa hamburger collapseToX">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <span class="sub">Collapse to X</span>
+                <div class="tabs source">
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'html5')">Html</button>
+                        <button class="tablinks" onclick="openTab(event, 'css5')">Css</button>
+                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                    </div>
+                    <div id="x" class="tabcontent"></div>
+                    <div id="html5" class="tabcontent code">
+                        <h3>HTML</h3>
+                        <code>
+                            &lt;button class="aa hamburger collapseToX"&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;span>&lt;/span&gt;
+                            &lt;/button&gt;
+                        </code>
+                    </div>
+                    <div id="css5" class="tabcontent code">
+                        <h3>Cascading Style Sheets</h3>
+                        <code>
+                            .aa.hamburger {<br>
+                                width: 3rem;<br>
+                                height: 1.75rem;<br>
+                                position: relative;<br>
+                                display: block;<br>
+                                background: transparent;<br>
+                                border: 0;<br>
+                                cursor: pointer;<br>
+                            }<br>
+                            .aa.hamburger span {<br>
+                                display: block;<br>
+                                background: #000;<br>
+                                width: 100%;<br>
+                                height: 0.4rem;<br>
+                                position: absolute;<br>
+                                left: 0;<br>
+                                border-radius: 0.25rem;<br>
+                                transition: all 0.4s;<br>
+                            }<br>
+                            .aa.hamburger span:nth-child(1) { top: 0; }<br>
+                            .aa.hamburger span:nth-child(2) { top: 50%; }<br>
+                            .aa.hamburger span:nth-child(3) { top: 100%; }<br>
+                            .aa.hamburger:hover span:nth-child(1) { transform: translateY(-0.2rem); }<br>
+                            .aa.hamburger:hover span:nth-child(3) { transform: translateY(0.2rem); }<br>
+                            /* hamburger-collapseToX */<br>
+                            .aa.hamburger.collapseToX.active span:nth-child(1) {<br>
+                                top: 1.1rem;<br>
+                                transform: rotate(45deg);<br>
+                                transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);<br>
+                            }<br>
+                            .aa.hamburger.collapseToX.active span:nth-child(2) {<br>
+                                top: 0;<br>
+                                opacity: 0;<br>
+                                transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;<br>
+                            }<br>
+                            .aa.hamburger.collapseToX.active span:nth-child(3) {<br>
+                                transform: translate3d(0, -10px, 0) rotate(-45deg);<br>
+                                transition-delay: 0.22s;<br>
+                                transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);<br>
+                            }<br>
+                        </code>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div><!-- hamburger buttons -->
+
+    <h2>Product reveal animation</h2><p class="message info">Click on the product to see the effect</p>
+    <section id="revealAnim">
+		<div class="images-container">
+			<img class="front" src="images/img_iphone_front.png" alt="iPhone">
+			<img class="back" src="images/img_iphone_back.png" alt="iPhone">
+			<img class="side" src="images/img_iphone_side.png" alt="iPhone">
+		</div>
+    </section>
+    <div class="tabs source">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'revealAnim-html')">Html</button>
+            <button class="tablinks" onclick="openTab(event, 'revealAnim-css')">Css</button>
+            <button class="tablinks" onclick="openTab(event, 'revealAnim-js')">Js</button>
+            <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+        </div>
+        <div id="revealAnim-html" class="tabcontent code">
+            <h3>HTML</h3>
+            <code>
+                &lt;div class="hasAnimation aaFromLeft"&gt;<br>
+                &lt;section id="revealAnim"&gt;<br>
+                &lt;div class="images-container"&gt;<br>
+                &lt;img class="front" src="images/img_iphone_front.png" alt="iPhone"&gt;<br>
+                &lt;img class="back" src="images/img_iphone_back.png" alt="iPhone"&gt;<br>
+                &lt;img class="side" src="images/img_iphone_side.png" alt="iPhone"&gt;<br>
+                &lt;/div&gt;<br>
+                &lt;/section&gt;<br>
+            </code>
+        </div>
+        <div id="revealAnim-css" class="tabcontent code">
+            <h3>Cascading Style Sheets</h3>
+            <code>
+                #revealAnim {<br>
+                    position: relative;<br>
+                    width: 960px;<br>
+                    height: 570px;<br>
+                    top: 100%;<br>
+                }<br>
+                #revealAnim .images-container {<br>
+                    display: block;<br>
+                    position: absolute;<br>
+                    z-index: 1;<br>
+                    top: 0;<br>
+                    width: 670px;<br>
+                    height: 600px;<br>
+                }<br>
+                #revealAnim .images-container img {<br>
+                    float: left;<br>
+                    position: relative;<br>
+                    z-index: 1;<br>
+                    vertical-align: middle;<br>
+                }<br>
+                #revealAnim .images-container .back { z-index: 2; transform:translate3d(-40%, 0, 0); }<br>
+                #revealAnim .images-container .front { transform:translate3d(61.6%, 0, 0); }<br>
+                #revealAnim .images-container .side { transform:translate3d(-338%, 0, 0); }<br>
+                #revealAnim img { transition: transform .5s .7s; }<br>
+                #revealAnim.active .images-container img { transform: translate3d(0, 0, 0); }<br>
+            </code>
+        </div>
+        <div id="revealAnim-js" class="tabcontent code">
+            <h3>Javascrit</h3>
+            <code>
+                var revealAnim = document.querySelectorAll('#revealAnim');<br>
+                <br>
+                var toggleActive = function() {<br>
+                    this.classList.toggle('active');<br>
+                    return false;<br>
+                }<br>
+                for(i=0; i&lt;revealAnim.length; i++) {<br>
+                    revealAnim[i].addEventListener("click", toggleActive);<br>
+                }<br>
+            </code>
+        </div>
+    </div>
+
+    <div id="showOnScroll">
+        <h2>Content on scroll</h2>
+        <h4>Show content from left</h4>
+        <div class="hasAnimation aaFromLeft">
+            <div class="logo">LOGO</div>
+            <div class="hero">You're looking at the hero block, please keep scrolling.</div>
+            <ul class="unstyled showLate">
+                <li class="aachildren wait025">Item 1</li>
+                <li class="aachildren wait05">Item 2</li>
+                <li class="aachildren wait10">Item 3</li>
+                <li class="aachildren wait125">Item 4</li>
+            </ul>
+        </div>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html6')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css6')">Css</button>
+                <button class="tablinks" onclick="openTab(event, 'js6')">Js</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="html6" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;div class="hasAnimation aaFromLeft"&gt;<br>
+                            &lt;div class="logo"&gt;LOGO&lt;/div&gt;<br>
+                        &lt;div class="hero"&gt;You're looking at the hero block, please keep scrolling.&lt;/div&gt;<br>
+                        &lt;ul class="unstyled showLate"&gt;<br>
+                                &lt;li class="aachildren wait025"&gt;Item 1&lt;/li&gt;<br>
+                            &lt;li class="aachildren wait05"&gt;Item 2&lt;/li&gt;<br>
+                            &lt;li class="aachildren wait10"&gt;Item 3&lt;/li&gt;<br>
+                            &lt;li class="aachildren wait125"&gt;Item 4&lt;/li&gt;<br>
+                        &lt;/ul&gt;<br>
+                    &lt;/div&gt;<br>
+                </code>
+            </div>
+            <div id="css6" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaFromLeft {<br>
+                        border: 1px solid rgba(0,0,0,0.2);<br>
+                        height: 500px;<br>
+                        overflow-y: scroll;<br>
+                        overflow-x: hidden;<br>
+                    }<br>
+                    .aaFromLeft { background: #f7f7fc; }<br>
+                    .aaFromLeft .logo { <br>
+                        background: #2e3192;<br>
+                        padding: 1.25rem;<br>
+                        font-size: 1.5rem;<br>
+                        font-weight: 600;<br>
+                        color: #fff;<br>
+                    }<br>
+                    .aaFromLeft .hero {<br>
+                        background: #ffb749;<br>
+                        padding: 13rem 1.25rem;<br>
+                        text-align: center;<br>
+                    }<br>
+                    .showLate { <br>
+                        visibility: hidden;<br>
+                        display: flex;<br>
+                        justify-content: center;<br>
+                    }<br>
+                    .showLate.aanimate { visibility: visible; }<br>
+                    .showLate li {<br>
+                        display: inline-block;<br>
+                        width: 20%;<br>
+                        height: 2rem;<br>
+                        margin: 2rem;<br>
+                        background: #fff;<br>
+                        border-radius: 0.25rem;<br>
+                        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);<br>
+                        padding: 0.75rem;<br>
+                        text-align: center;<br>
+                    }<br>
+                    /* Content on scroll begin */<br>
+                    .aanimate .aachildren {<br>
+                        opacity: 0;<br>
+                        animation: showlate 1.5s  ease forwards;<br>
+                    }<br>
+                    .aanimate .wait025 { animation-delay: .25s; }<br>
+                    .aanimate .wait05 { animation-delay: .5s; }<br>
+                    .aanimate .wait075 { animation-delay: .75s; }<br>
+                    .aanimate .wait10 { animation-delay: 1s; }<br>
+                    .aanimate .wait125 { animation-delay: 1.25s; }<br>
+                    .aanimate .wait15 { animation-delay: 1.5s; }<br>
+                    .aanimate .wait175 { animation-delay: 1.75s; }<br>
+                    .aanimate .wait20 { animation-delay: 2s; }<br>
+                    .aanimate .wait25 { animation-delay: 2.5s; }<br>
+                    .aanimate .wait30 { animation-delay: 3s; }<br>
+                    .aanimate .wait35 { animation-delay: 3.5s; }<br>
+                    .aanimate .wait40 { animation-delay: 4s; }<br>
+                    .aanimate .wait45 { animation-delay: 4.5s; }<br>
+                    .aanimate .wait50 { animation-delay: 5s; }<br>
+                    .aanimate .wait55 { animation-delay: 5.5s; }<br>
+                    .aanimate .wait60 { animation-delay: 6s; }<br>
+                    .aanimate .wait65 { animation-delay: 6.5s; }<br>
+                    .aanimate .wait70 { animation-delay: 7s; }<br>
+                    .aanimate .wait75 { animation-delay: 7.5s; }<br>
+                    .aanimate .wait80 { animation-delay: 8s; }<br>
+                    .aanimate .wait85 { animation-delay: 8.5s; }<br>
+                    .aanimate .wait90 { animation-delay: 9s; }<br>
+                    .aanimate .wait95 { animation-delay: 9.5s; }<br>
+                    .aanimate .wait100 { animation-delay: 10s; }<br>
+                    /* Content on scroll end */<br>
+                    @keyframes showlate {<br>
+                        0% {<br>
+                            opacity: 0;<br>
+                            transition: <br>
+                                opacity .6s cubic-bezier(.455,.03,.515,.955) .35s,<br>
+                                transform .8s cubic-bezier(.165,.84,.44,1) .35s,<br>
+                                -webkit-transform .8s cubic-bezier(.165,.84,.44,1) .35s;<br>
+                            transform: translate3d(-25%, 0px, 0px);<br>
+                        }<br>
+                        100% {<br>
+                            opacity: 1;<br>
+                            transform: translate3d(0px, 0px, 0px);<br>
+                        }<br>
+                    }<br>
+                </code>
+            </div>
+            <div id="js6" class="tabcontent code">
+                <h3>Javascrit</h3>
+                <code>
+                    /* show and animate elements on the page on scroll */<br>
+                    var containerWithAnimateEl = document.querySelectorAll('.hasAnimation');<br>
+                    console.log(containerWithAnimateEl[0].scrollTop);<br>
+                    for(i=0; i&lt;containerWithAnimateEl.length; i++) {<br>
+                        containerWithAnimateEl[i].addEventListener('scroll', function(){<br>
+                            if(this.scrollTop &gt; 100 ) {<br>
+                                document.querySelector('.showLate').classList.add('aanimate');<br>
+                            } <br>
+                            if(this.scrollTop &lt; 100) {<br>
+                                document.querySelector('.showLate').classList.remove('aanimate');<br>
+                            }<br>
+                            return false;<br>
+                        });<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
+
+        <h2>Image effects</h2>
+        <h4>Zoom on scroll</h4>
+        <div id="demoIMG1" class="aaImgZoom">
+            <img src="images/demo/product.png"/>
+        </div>
+        <br>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html7')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css7')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="html7" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;div id="demoIMG1" class="aaImgZoom"&gt;<br>
+                        &lt;img src="images/demo/product.png"/&gt;<br>
+                    &lt;/div&gt;<br>
+                </code>
+            </div>
+            <div id="css7" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaImgZoom { text-align: center; }<br>
+                    .aaImgZoom img {<br>
+                        transition: all 0.6s;<br>
+                        transform: scale(1);<br>
+                        backface-visibility: hidden;<br>
+                        align-self: center;<br>
+                    }<br>
+                    .aaImgZoom img:hover {<br>
+                        transform: scale(1.1);<br>
+                    }<br>
+                    #demoIMG1 { <br>
+                        margin-right: 1rem;<br>
+                        width: 200px;<br>
+                        display: inline-block;<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
+        <br>
+
+        <img src="images/demo/product1.png" id="demoIMG2" class="aaImgZoom fullRounded"/>
+        <br>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'demoIMG2-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'demoIMG2-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="demoIMG2-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;img src="images/demo/product1.png" id="demoIMG2" class="aaImgZoom fullRounded"/&gt;<br>
+                </code>
+            </div>
+            <div id="demoIMG2-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaImgZoom { text-align: center; }<br>
+                    img.aaImgZoom {<br>
+                        transition: all 0.6s;<br>
+                        transform: scale(1);<br>
+                        backface-visibility: hidden;<br>
+                        align-self: center;<br>
+                    }<br>
+                    img.aaImgZoom:hover {<br>
+                        transform: scale(1.1);<br>
+                    }<br>
+                    #demoIMG2 {<br>
+                        width: 200px;<br>
+                        height: 200px;<br>
+                        overflow: hidden;<br>
+                        display: inline-block;<br>
+                        margin-right: 1rem;<br>
+                    }<br>
+                    .fullRounded { <br>
+                        border-radius: 50%; <br>
+                        overflow: hidden;<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
+        <br>
+
+        <h4>Dynamic image</h4>
+        <div id="demoIMG3">
+            <img src="images/demo/demo1.jpg"/>
+        </div>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'demoIMG3-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'demoIMG3-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="demoIMG3-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;div id="demoIMG3"&gt;<br>
+                    &lt;img src="images/demo/demo1.jpg"/&gt;<br>
+                    &lt;/div&gt;<br>
+                </code>
+            </div>
+            <div id="demoIMG3-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    #demoIMG3 { <br>
+                        position: relative;<br>
+                        width: 50%;<br>
+                        height: 350px;<br>
+                        overflow: hidden;<br>
+                    }<br>
+                    #demoIMG3 img {<br>
+                        transform: scale(1.1);<br>
+                        animation: liveimage 40s ease both infinite;<br>
+                    }<br>
+                    @keyframes liveimage {<br>
+                        0% {<br>
+                            transition: all 1s ease-in-out;<br>
+                            transform: scale(1.1) translate3d(0, 0, 0);<br>
+                        }<br>
+                        50% {<br>
+                            transform: scale(1) translate3d(0, -10%, 0);<br>
+                        }<br>
+                        100% {<br>
+                            transition: all 1s ease-in-out;<br>
+                            transform: scale(1.1) translate3d(0, 0, 0);<br>
+                        }<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
+
+        <h2>Buttons</h2>
+        <h4>Bouncing border + pulse</h4>
+        <a href="#" class="aaBtnRight aaBorderBounce"><img src="images/demo/arrow.svg" alt="Forward"/></a>
+        <br>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'aaBtnRight-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'aaBtnRight-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="aaBtnRight-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;a href="#" class="aaBtnRight aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Forward"/&gt;&lt;/a&gt;<br>
+                </code>
+            </div>
+            <div id="aaBtnRight-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaBorderBounce img {<br>
+                        width: 40%;<br>
+                        vertical-align: middle;<br>
+                    }<br>
+                    .aaBorderBounce {<br>
+                        width: 52px;<br>
+                        height: 52px;<br>
+                        overflow: hidden;<br>
+                        border-radius: 100%;<br>
+                        display: inline-block;<br>
+                        position: relative;<br>
+                        text-align: center;<br>
+                        vertical-align: middle;<br>
+                        line-height: 46px;<br>
+                    }<br>
+                    .aaBorderBounce:before, .aaBorderBounce:after {<br>
+                        content: "";<br>
+                        display: block;<br>
+                        border-radius: 100%;<br>
+                        position: absolute;<br>
+                        top: 0;<br>
+                        left: 0;<br>
+                    }<br>
+                    .aaBorderBounce:before {<br>
+                        width: 48px;<br>
+                        height: 48px;<br>
+                        border: 1px solid rgba(0, 0, 0, 0.25);<br>
+                        transform: scale(1);<br>
+                        opacity: 1;<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 80ms,transform .5s cubic-bezier(.455,.03,.515,.955) 80ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 80ms;<br>
+                    }<br>
+                    .aaBorderBounce:after {<br>
+                        width: 46px;<br>
+                        height: 46px;<br>
+                        opacity: 0;<br>
+                        border: 2px solid red;<br>
+                        transform: scale(1.3);<br>
+                        transform-origin: center;<br>
+                        transition: opacity .4s ease;<br>
+                    }<br>
+                    .aaBorderBounce:hover:after {<br>
+                        opacity: 1;<br>
+                        transform: scale(1);<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 50ms,transform .5s cubic-bezier(.455,.03,.515,.955) 50ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 50ms;<br>
+                    }<br>
+                    .aaBorderBounce:hover:before {<br>
+                        opacity: 0;<br>
+                        transform: scale(0.7);<br>
+                        transition: opacity .4s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.25,.46,.45,.94),-webkit-transform .5s cubic-bezier(.25,.46,.45,.94);<br>
+                    }<br>
+                    .aaBorderBounce:hover > * {<br>
+                        animation: pulse 0.75s forwards;<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
+        <br>
+
+        <a href="#" class="aaBtnLeft aaBorderBounce"><img src="images/demo/arrow.svg" alt="Back"/></a>
+        <br>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'aaBtnLeft-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'aaBtnLeft-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="aaBtnLeft-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;a href="#" class="aaBtnLeft aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Back"/&gt;&lt;/a&gt;<br>
+                </code>
+            </div>
+            <div id="aaBtnLeft-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaBorderBounce img {<br>
+                        width: 40%;<br>
+                        vertical-align: middle;<br>
+                    }<br>
+                    .aaBorderBounce {<br>
+                        width: 52px;<br>
+                        height: 52px;<br>
+                        overflow: hidden;<br>
+                        border-radius: 100%;<br>
+                        display: inline-block;<br>
+                        position: relative;<br>
+                        text-align: center;<br>
+                        vertical-align: middle;<br>
+                        line-height: 46px;<br>
+                    }<br>
+                    .aaBorderBounce:before, .aaBorderBounce:after {<br>
+                        content: "";<br>
+                        display: block;<br>
+                        border-radius: 100%;<br>
+                        position: absolute;<br>
+                        top: 0;<br>
+                        left: 0;<br>
+                    }<br>
+                    .aaBorderBounce:before {<br>
+                        width: 48px;<br>
+                        height: 48px;<br>
+                        border: 1px solid rgba(0, 0, 0, 0.25);<br>
+                        transform: scale(1);<br>
+                        opacity: 1;<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 80ms,transform .5s cubic-bezier(.455,.03,.515,.955) 80ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 80ms;<br>
+                    }<br>
+                    .aaBorderBounce:after {<br>
+                        width: 46px;<br>
+                        height: 46px;<br>
+                        opacity: 0;<br>
+                        border: 2px solid red;<br>
+                        transform: scale(1.3);<br>
+                        transform-origin: center;<br>
+                        transition: opacity .4s ease;<br>
+                    }<br>
+                    .aaBorderBounce:hover:after {<br>
+                        opacity: 1;<br>
+                        transform: scale(1);<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 50ms,transform .5s cubic-bezier(.455,.03,.515,.955) 50ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 50ms;<br>
+                    }<br>
+                    .aaBorderBounce:hover:before {<br>
+                        opacity: 0;<br>
+                        transform: scale(0.7);<br>
+                        transition: opacity .4s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.25,.46,.45,.94),-webkit-transform .5s cubic-bezier(.25,.46,.45,.94);<br>
+                    }<br>
+                    .aaBorderBounce:hover > * {<br>
+                        animation: pulse 0.75s forwards;<br>
+                    }<br>
+                    .aaBtnLeft { transform: rotate(180deg); }<br>
+                </code>
+            </div>
+        </div>
+        <br>
+
+        <a href="#" class="aaBtnTop aaBorderBounce"><img src="images/demo/arrow.svg" alt="Up"/></a>
+        <br>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'aaBtnTop-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'aaBtnTop-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="aaBtnTop-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;a href="#" class="aaBtnTop aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Up"/&gt;&lt;/a&gt;<br>
+                </code>
+            </div>
+            <div id="aaBtnTop-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaBorderBounce img {<br>
+                        width: 40%;<br>
+                        vertical-align: middle;<br>
+                    }<br>
+                    .aaBorderBounce {<br>
+                        width: 52px;<br>
+                        height: 52px;<br>
+                        overflow: hidden;<br>
+                        border-radius: 100%;<br>
+                        display: inline-block;<br>
+                        position: relative;<br>
+                        text-align: center;<br>
+                        vertical-align: middle;<br>
+                        line-height: 46px;<br>
+                    }<br>
+                    .aaBorderBounce:before, .aaBorderBounce:after {<br>
+                        content: "";<br>
+                        display: block;<br>
+                        border-radius: 100%;<br>
+                        position: absolute;<br>
+                        top: 0;<br>
+                        left: 0;<br>
+                    }<br>
+                    .aaBorderBounce:before {<br>
+                        width: 48px;<br>
+                        height: 48px;<br>
+                        border: 1px solid rgba(0, 0, 0, 0.25);<br>
+                        transform: scale(1);<br>
+                        opacity: 1;<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 80ms,transform .5s cubic-bezier(.455,.03,.515,.955) 80ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 80ms;<br>
+                    }<br>
+                    .aaBorderBounce:after {<br>
+                        width: 46px;<br>
+                        height: 46px;<br>
+                        opacity: 0;<br>
+                        border: 2px solid red;<br>
+                        transform: scale(1.3);<br>
+                        transform-origin: center;<br>
+                        transition: opacity .4s ease;<br>
+                    }<br>
+                    .aaBorderBounce:hover:after {<br>
+                        opacity: 1;<br>
+                        transform: scale(1);<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 50ms,transform .5s cubic-bezier(.455,.03,.515,.955) 50ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 50ms;<br>
+                    }<br>
+                    .aaBorderBounce:hover:before {<br>
+                        opacity: 0;<br>
+                        transform: scale(0.7);<br>
+                        transition: opacity .4s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.25,.46,.45,.94),-webkit-transform .5s cubic-bezier(.25,.46,.45,.94);<br>
+                    }<br>
+                    .aaBorderBounce:hover > * {<br>
+                        animation: pulse 0.75s forwards;<br>
+                    }<br>
+                    .aaBtnTop { transform: rotate(270deg); }<br>
+                </code>
+            </div>
+        </div>
+        <br>
+
+        <a href="#" class="aaBtnBottom aaBorderBounce"><img src="images/demo/arrow.svg" alt="Down"/></a>
+        <br>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'aaBtnBottom-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'aaBtnBottom-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="aaBtnBottom-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;a href="#" class="aaBtnBottom aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Down"/&gt;&lt;/a&gt;<br>
+                </code>
+            </div>
+            <div id="aaBtnBottom-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaBorderBounce img {<br>
+                        width: 40%;<br>
+                        vertical-align: middle;<br>
+                    }<br>
+                    .aaBorderBounce {<br>
+                        width: 52px;<br>
+                        height: 52px;<br>
+                        overflow: hidden;<br>
+                        border-radius: 100%;<br>
+                        display: inline-block;<br>
+                        position: relative;<br>
+                        text-align: center;<br>
+                        vertical-align: middle;<br>
+                        line-height: 46px;<br>
+                    }<br>
+                    .aaBorderBounce:before, .aaBorderBounce:after {<br>
+                        content: "";<br>
+                        display: block;<br>
+                        border-radius: 100%;<br>
+                        position: absolute;<br>
+                        top: 0;<br>
+                        left: 0;<br>
+                    }<br>
+                    .aaBorderBounce:before {<br>
+                        width: 48px;<br>
+                        height: 48px;<br>
+                        border: 1px solid rgba(0, 0, 0, 0.25);<br>
+                        transform: scale(1);<br>
+                        opacity: 1;<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 80ms,transform .5s cubic-bezier(.455,.03,.515,.955) 80ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 80ms;<br>
+                    }<br>
+                    .aaBorderBounce:after {<br>
+                        width: 46px;<br>
+                        height: 46px;<br>
+                        opacity: 0;<br>
+                        border: 2px solid red;<br>
+                        transform: scale(1.3);<br>
+                        transform-origin: center;<br>
+                        transition: opacity .4s ease;<br>
+                    }<br>
+                    .aaBorderBounce:hover:after {<br>
+                        opacity: 1;<br>
+                        transform: scale(1);<br>
+                        transition: opacity .4s cubic-bezier(.77,0,.175,1) 50ms,transform .5s cubic-bezier(.455,.03,.515,.955) 50ms,-webkit-transform .5s cubic-bezier(.455,.03,.515,.955) 50ms;<br>
+                    }<br>
+                    .aaBorderBounce:hover:before {<br>
+                        opacity: 0;<br>
+                        transform: scale(0.7);<br>
+                        transition: opacity .4s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.25,.46,.45,.94),-webkit-transform .5s cubic-bezier(.25,.46,.45,.94);<br>
+                    }<br>
+                    .aaBorderBounce:hover > * {<br>
+                        animation: pulse 0.75s forwards;<br>
+                    }<br>
+                    .aaBtnBottom { transform: rotate(90deg); }<br>
+                </code>
+            </div>
+        </div>
+        <br><br>
+
+        <a href="#" class="aaBtnLink aaBottomBorder">Link with bottom border</a>
+        <br>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'aaBottomBorder-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'aaBottomBorder-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="aaBottomBorder-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;a href="#" class="aaBtnLink aaBottomBorder"&gt;Link with bottom border&lt;/a&gt;<br>
+                </code>
+            </div>
+            <div id="aaBaaBottomBordertnBottom-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaBtnLink.aaBottomBorder {<br>
+                        display: inline-block;<br>
+                        position: relative;<br>
+                        font-size: 20px;<br>
+                        line-height: 16px;<br>
+                        color: #b8b8b8;<br>
+                        text-decoration: none;<br>
+                        transition: color .8s cubic-bezier(.165,.84,.44,1);<br>
+                    }<br>
+                    .aaBtnLink.aaBottomBorder::after {<br>
+                        content: "";<br>
+                        height: 3px;<br>
+                        width: 100%;<br>
+                        background-color: red;<br>
+                        position: absolute;<br>
+                        bottom: -12px;<br>
+                        left: 0;<br>
+                        transform: scaleX(0);<br>
+                        transition: transform .8s cubic-bezier(.165,.84,.44,1);<br>
+                    }<br>
+                    .aaBtnLink.aaBottomBorder:hover { color: #242a3a; }<br>
+                    .aaBtnLink.aaBottomBorder:hover::after { transform: scaleX(1); <br>
+                </code>
+            </div>
+        </div>
+        <br>
+    </div>
+    <ul class="nav">
+        <li class="active"><a href="index.html">Home page</a></li>
+        <li><a href="fade-directions.html">Fade directions</a></li>
+        <li><a href="parallax.html">Parallax effects</a></li>
+        <li><a href="skelletons.html">Skelletons</a></li>
+    </ul>
+
+<script src="aa-script.js"></script>
+<script>
+    /* hamburger buttons begin */
+    var hamburger = document.querySelectorAll('.aa.hamburger');
+    var revealAnim = document.querySelectorAll('#revealAnim');
+
+    var toggleActive = function() {
+        this.classList.toggle('active');
+        return false;
+    }
+
+    for(i=0; i<hamburger.length; i++) {
+        hamburger[i].addEventListener("click", toggleActive);
+    }
+    for(i=0; i<revealAnim.length; i++) {
+        revealAnim[i].addEventListener("click", toggleActive);
+    }
+
+
+    /* show and animate elements on the page on scroll */
+    var containerWithAnimateEl = document.querySelectorAll('.hasAnimation');
+    console.log(containerWithAnimateEl[0].scrollTop);
+    for(i=0; i<containerWithAnimateEl.length; i++) {
+        containerWithAnimateEl[i].addEventListener('scroll', function(){
+            if(this.scrollTop > 100 ) {
+                document.querySelector('.showLate').classList.add('aanimate');
+            } 
+            if(this.scrollTop < 100) {
+                document.querySelector('.showLate').classList.remove('aanimate');
+            }
+            return false;
+        });
+    }
+</script>
+</body>
+</html>

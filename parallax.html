@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<title>AnimateLib</title>
+<meta description="" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+<link href="css/aa-generic.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="css/aa-style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div id="parallax">
+        <h2>Parallax - pure css</h2>
+        <div class="aa parallax">
+            <div class="parallax_group">
+                <div class="parallax_layer parallax_layer_back">
+                    <img src="https://thegreatswap.co.uk/assets/content/images/summer_varna_2.jpg"/>
+                </div>
+                <div class="parallax_layer parallax_layer_base">
+                    <div class="sampleParallaxNav">
+                        <h3>Page name</h3>
+                        <ul>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Consectetur adipisicing</a></li>
+                            <li><a href="#">Maxime quis</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax_group">
+                <div class="parallax_layer parallax_layer_base">
+                    <div class="sampleParallaxContentBlock">
+                        <h3>Sample title</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quis nostrum ratione alias aut libero odit velit, ut, minima debitis sunt in incidunt beatae omnis doloribus eveniet cupiditate repudiandae quas!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'pureparallax-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'pureparallax-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="pureparallax-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;div class="aa parallax"&gt;<br>
+                        &lt;div class="parallax_group"&gt;<br>
+                            &lt;div class="parallax_layer parallax_layer_back"&gt;<br>
+                                &lt;img src="https://thegreatswap.co.uk/assets/content/images/summer_varna_2.jpg"/&gt;<br>
+                            &lt;/div&gt;<br>
+                            &lt;div class="parallax_layer parallax_layer_base"&gt;<br>
+                                &lt;div class="sampleParallaxNav"&gt;<br>
+                                    &lt;h3&gt;Page name&lt;/h3&gt;<br>
+                                        &lt;ul&gt;<br>
+                                            &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum&lt;/a&gt;&lt;/li&gt;<br>
+                                            &lt;li&gt;&lt;a href="#"&gt;Consectetur adipisicing&lt;/a&gt;&lt;/li&gt;<br>
+                                            &lt;li&gt;&lt;a href="#"&gt;Maxime quis&lt;/a&gt;&lt;/li&gt;<br>
+                                        &lt;/ul&gt;<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                            &lt;/div&gt;<br>
+                            &lt;div class="parallax_group"&gt;<br>
+                                &lt;div class="parallax_layer parallax_layer_base"&gt;<br>
+                                    &lt;div class="sampleParallaxContentBlock"&gt;<br>
+                                        &lt;h3&gt;Sample title&lt;/h3&gt;<br>
+                                        &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quis nostrum ratione alias aut libero odit velit, ut, minima debitis sunt in incidunt beatae omnis doloribus eveniet cupiditate repudiandae quas!&lt;/p&gt;<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                            &lt;/div&gt;<br>
+                        &lt;/div&gt;<br>
+                </code>
+            </div>
+            <div id="pureparallax-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aa.parallax {<br>
+                        perspective: 1px;<br>
+                        height: 100vh;<br>
+                        overflow-x: hidden;<br>
+                        overflow-y: auto;<br>
+                    }<br>
+                    .aa.parallax .parallax_group {<br>
+                        position: relative;<br>
+                        height: 100vh;<br>
+                        transform-style: preserve-3d;<br>
+                    }<br>
+                    .aa.parallax .parallax_layer {<br>
+                        position: absolute;<br>
+                        top: 0;<br>
+                        right: 0;<br>
+                        bottom: 0;<br>
+                        left: 0;<br>
+                    }<br>
+                    .aa.parallax .parallax_layer_base {<br>
+                        transform: translateZ(0) scale(1);<br>
+                    }<br>
+                    .aa.parallax .parallax_layer_back {<br>
+                        transform: translateZ(-1px) scale(2);<br>
+                        top: 5rem;<br>
+                    }<br>
+                </code>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="parallax-stars">
+    <h2>Background particles - stars</h2>
+        <div class="aa parallax stars">
+            <div id="particles-js"></div>
+        </div>
+        <script src="particles.min.js"></script>
+        <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 355,
+                    "density": {
+                        "enable": true,
+                        "value_area": 789.1476416322727
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.48927153781200905,
+                    "random": false,
+                    "anim": {
+                        "enable": true,
+                        "speed": 0.2,
+                        "opacity_min": 0,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 2,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 0.2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                    "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 83.91608391608392,
+                    "size": 1,
+                    "duration": 3,
+                    "opacity": 1,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+                }
+            },
+            "retina_detect": true
+            });
+            </script>
+
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'starsParallax-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'starsParallax-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, 'starsParallax-js')">Js</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="starsParallax-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
+                            &lt;div class="aa parallax stars"&gt;<br>
+                            &lt;div id="particles-js"&gt;&lt;/div&gt;<br>
+                            &lt;/div&gt;
+                    </code>
+                </div>
+                <div id="starsParallax-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
+                        .aa.parallax.stars {<br>
+                            margin: 0;<br>
+                            background-color: #17182f;<br>
+                            max-height: 600px;<br>
+                        }<br>
+                        .aa.parallax.stars canvas {<br>
+                            display: block;<br>
+                            vertical-align: bottom;<br>
+                        }<br>
+                        #particles-js {<br>
+                            position: absolute;<br>
+                            width: 100%;<br>
+                            height: 100%;<br>
+                        }<br>
+                    </code>
+                </div>
+                <div id="starsParallax-js" class="tabcontent code">
+                    <h3>Javascrit</h3>
+                    <code>
+                        &lt;script src="particles.min.js"&gt;&lt;/script&gt;<br>
+                        &lt;script&gt;<br>
+                        particlesJS("particles-js", {<br>
+                            "particles": {<br>
+                                "number": {<br>
+                                    "value": 355,<br>
+                                    "density": {<br>
+                                        "enable": true,<br>
+                                        "value_area": 789.1476416322727<br>
+                                    }<br>
+                                },<br>
+                                "color": {<br>
+                                    "value": "#ffffff"<br>
+                                },<br>
+                                "shape": {<br>
+                                    "type": "circle",<br>
+                                    "stroke": {<br>
+                                        "width": 0,<br>
+                                        "color": "#000000"<br>
+                                    },<br>
+                                    "polygon": {<br>
+                                        "nb_sides": 5<br>
+                                    },<br>
+                                    "image": {<br>
+                                        "src": "img/github.svg",<br>
+                                        "width": 100,<br>
+                                        "height": 100<br>
+                                    }<br>
+                                },<br>
+                                "opacity": {<br>
+                                    "value": 0.48927153781200905,<br>
+                                    "random": false,<br>
+                                    "anim": {<br>
+                                        "enable": true,<br>
+                                        "speed": 0.2,<br>
+                                        "opacity_min": 0,<br>
+                                        "sync": false<br>
+                                    }<br>
+                                },<br>
+                                "size": {<br>
+                                    "value": 2,<br>
+                                    "random": true,<br>
+                                    "anim": {<br>
+                                        "enable": true,<br>
+                                        "speed": 2,<br>
+                                        "size_min": 0,<br>
+                                        "sync": false<br>
+                                    }<br>
+                                },<br>
+                                "line_linked": {<br>
+                                    "enable": false,<br>
+                                    "distance": 150,<br>
+                                    "color": "#ffffff",<br>
+                                    "opacity": 0.4,<br>
+                                    "width": 1<br>
+                                },<br>
+                                "move": {<br>
+                                    "enable": true,<br>
+                                    "speed": 0.2,<br>
+                                    "direction": "none",<br>
+                                    "random": true,<br>
+                                    "straight": false,<br>
+                                    "out_mode": "out",<br>
+                                    "bounce": false,<br>
+                                    "attract": {<br>
+                                        "enable": false,<br>
+                                        "rotateX": 600,<br>
+                                        "rotateY": 1200<br>
+                                    }<br>
+                                }<br>
+                            },<br>
+                            "interactivity": {<br>
+                                "detect_on": "canvas",<br>
+                                "events": {<br>
+                                    "onhover": {<br>
+                                        "enable": true,<br>
+                                        "mode": "bubble"<br>
+                                    },<br>
+                                    "onclick": {<br>
+                                        "enable": true,<br>
+                                    "mode": "push"<br>
+                                },<br>
+                                "resize": true<br>
+                            },<br>
+                            "modes": {<br>
+                            "grab": {<br>
+                                "distance": 400,<br>
+                                "line_linked": {<br>
+                                "opacity": 1<br>
+                                }<br>
+                            },<br>
+                            "bubble": {<br>
+                                "distance": 83.91608391608392,<br>
+                                "size": 1,<br>
+                                "duration": 3,<br>
+                                "opacity": 1,<br>
+                                "speed": 3<br>
+                            },<br>
+                            "repulse": {<br>
+                                "distance": 200,<br>
+                                "duration": 0.4<br>
+                            },<br>
+                            "push": {<br>
+                                "particles_nb": 4<br>
+                            },<br>
+                            "remove": {<br>
+                                "particles_nb": 2<br>
+                            }<br>
+                            }<br>
+                        },<br>
+                        "retina_detect": true<br>
+                        });<br>
+                        &lt;/script&gt;<br>
+                    </code>
+                </div><a href="particles.min.js">Download particles.min.js</a>
+            </div>
+    </div>
+
+    <div id="randomBgParticles">
+        <h2>Random background particles</h2>
+        <div class="aa ball"></div>
+        <script>
+            // Some random colors
+            const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+            const numBalls = 40;
+            const balls = [];
+
+            for (let i = 0; i < numBalls; i++) {
+                let ball = document.createElement("div");
+                ball.classList.add("ball");
+                ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+                ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+                ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+                ball.style.transform = `scale(${Math.random()})`;
+                ball.style.width = `${Math.random()}em`;
+                ball.style.height = ball.style.width;
+
+                balls.push(ball);
+                document.querySelector('.aa.ball').append(ball);
+            }
+            // Keyframes
+            balls.forEach((el, i, ra) => {
+                let to = {
+                    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+                    y: Math.random() * 12
+                };
+          
+                let anim = el.animate(
+                [
+                    { transform: "translate(0, 0)" },
+                    { transform: `translate(${to.x}rem, ${to.y}rem)` }
+                ],
+                {
+                    duration: (Math.random() + 1) * 5000, // random duration
+                    direction: "alternate",
+                    fill: "both",
+                    iterations: Infinity,
+                    easing: "ease-in-out"
+                }
+                );
+            });
+        </script>
+    </div>
+
+    <ul class="nav">
+        <li><a href="index.html">Home page</a></li>
+        <li><a href="fade-directions.html">Fade directions</a></li>
+        <li class="active"><a href="parallax.html">Parallax effects</a></li>
+        <li><a href="skelletons.html">Skelletons</a></li>
+    </ul>
+        
+
+<script src="aa-script.js"></script>
+</body>
+</html>

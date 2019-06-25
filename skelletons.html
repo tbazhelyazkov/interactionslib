@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<title>AnimateLib</title>
+<meta description="" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+<link href="css/aa-generic.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="css/aa-style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div id="skeletonScreen">
+        <h2>Skeleton Screen</h2>
+        <div class="aaSkeleton container">
+            <section class="card">
+                <figure class="card-image loading"></figure>
+                <div class="card-details">
+                    <h3 class="card-title loading"></h3>
+                    <p class="card-description loading"></p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <ul class="nav">
+        <li><a href="index.html">Home page</a></li>
+        <li><a href="fade-directions.html">Fade directions</a></li>
+        <li><a href="parallax.html">Parallax effects</a></li>
+        <li class="active"><a href="skelletons.html">Skelletons</a></li>
+    </ul>
+
+    <div class="tabs source">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'html')">Html</button>
+            <button class="tablinks" onclick="openTab(event, 'css')">Css</button>
+            <button class="tablinks" onclick="openTab(event, 'js')">Js</button>
+        </div>
+        <div id="html" class="tabcontent code">
+            <h3>HTML</h3>
+            <code>
+                &lt;div class="aaSkeleton container"&gt;<br>
+                    &lt;section class="card"&gt;<br>
+                        &lt;figure class="card-image loading"&gt;&lt;/figure&gt;<br>
+                        &lt;div class="card-details"&gt;<br>
+                            &lt;h3 class="card-title loading"&gt;&lt;/h3&gt;<br>
+                            &lt;p class="card-description loading"&gt;&lt;/p&gt;<br>
+                        &lt;/div&gt;<br>
+                    &lt;/section&gt;<br>
+                    &lt;/div&gt;<br>
+            </code>
+        </div>
+        <div id="css" class="tabcontent code">
+            <h3>Cascading Style Sheets</h3>
+            <code>
+                .aaSkeleton .card {<br>
+                    overflow: hidden;<br>
+                    background: #fff;<br>
+                    border-radius: 0.35rem;<br>
+                    max-width: 380px;<br>
+                    width: 380px;<br>
+                    padding: 1rem;<br>
+                    box-shadow: 0 15px 60px 0 rgba(0,0,0,0.08), 0 5px 25px 0 rgba(0,0,0,.08);<br>
+                    transition: ease box-shadow 0.3s;<br>
+                }<br>
+                .aaSkeleton .card:hover {<br>
+                    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.25), 0 5px 15px 0 rgba(0,0,0,0.025);<br>
+                }<br>
+                .aaSkeleton .card .card-detail { padding: 0.5rem 1rem; }<br>
+                .aaSkeleton .card .card-detail h3 { <br>
+                    font-size: 1.5rem;<br>
+                    margin-bottom: none;<br>
+                    line-height: 0.09;<br>
+                }<br>
+                .aaSkeleton .card .card-detail p { line-height: 1.3rem; }<br>
+                .aaSkeleton .card .card-image {<br>
+                    margin: 0;<br>
+                    padding: 0;<br>
+                    height: 200px;<br>
+                    overflow: hidden;<br>
+                }<br>
+                .aaSkeleton .card .card-image img {<br>
+                    max-width: 100%;<br>
+                    height: auto;<br>
+                }<br>
+                .aaSkeleton .loading {<br>
+                    position: relative;<br>
+                    background-color: #e2e2e2;<br>
+                }<br>
+                .aaSkeleton .loading::after {<br>
+                    display: block;<br>
+                    content: '';<br>
+                    position: absolute;<br>
+                    width: 100%;<br>
+                    height: 100%;<br>
+                    transform: translateX(-100%);<br>
+                    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);<br>
+                    animation: loading 1.5s infinite;<br>
+                }<br>
+                .aaSkeleton .card .card-image.loading { border-radius: 0; }<br>
+                .aaSkeleton .card .card-image.image {<br>
+                    max-width: 100%;<br>
+                    height: auto;<br>
+                }<br>
+                .aaSkeleton .card .card-title.loading { height: 1.8rem; }<br>
+                .aaSkeleton .card .card-description.loading { height: 80px; }<br>
+                <br>
+                @keyframes loading {<br>
+                    100% { transform: translateX(100%); }<br>
+                }
+            </code>
+        </div>
+        <div id="js" class="tabcontent code">
+            <h3>Javascrit</h3>
+            <code>
+                /* skeleton */<br>
+                const cardImage = document.querySelector('.card-image');<br>
+                const cardTitle = document.querySelector('.card-title');<br>
+                const cardDesc = document.querySelector('.card-description');<br>
+                <br>
+                const renderCard = () => {<br>
+                    cardTitle.textContent = 'Card Title Yo!';<br>
+                    cardDesc.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta repellat quibusdam assumenda at distinctio similique eos? Officiis voluptatem accusamus, id odit, quos eaque nemo, dicta quidem eum eligendi veritatis.';<br>
+                    createImage();<br>
+                    cardTitle.classList.remove('loading');<br>
+                    cardDesc.classList.remove('loading');<br>
+                    cardImage.classList.remove('loading');<br>
+                };<br>
+                <br>
+                function createImage() {<br>
+                    const img = new Image();<br>
+                    img.classList.add("image");<br>
+                    img.setAttribute('alt', 'A cloud day at a mountain base');<br>
+                    img.setAttribute('src', 'http://www.varna.bg/files/images/articles/custom/f852be1aa305dfb747361d8c7d452e24.jpeg');<br>
+                    cardImage.appendChild(img);<br>
+                }<br>
+                <br>
+                setTimeout(() => {<br>
+                    renderCard();<br>
+                }, 1250);
+            </code>
+        </div>
+    </div>
+<script src="aa-script.js"></script>
+<script>
+    /* skeleton */
+    const cardImage = document.querySelector('.card-image');
+    const cardTitle = document.querySelector('.card-title');
+    const cardDesc = document.querySelector('.card-description');
+
+    const renderCard = () => {
+        cardTitle.textContent = 'Card Title Yo!';
+        cardDesc.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero dicta repellat quibusdam assumenda at distinctio similique eos? Officiis voluptatem accusamus, id odit, quos eaque nemo, dicta quidem eum eligendi veritatis.';
+        createImage();
+        cardTitle.classList.remove('loading');
+        cardDesc.classList.remove('loading');
+        cardImage.classList.remove('loading');
+    };
+
+    function createImage() {
+        const img = new Image();
+        img.classList.add("image");
+        img.setAttribute('alt', 'A cloud day at a mountain base');
+        img.setAttribute('src', 'http://www.varna.bg/files/images/articles/custom/f852be1aa305dfb747361d8c7d452e24.jpeg');
+        cardImage.appendChild(img);
+    }
+
+    setTimeout(() => {
+        renderCard();
+    }, 1250);
+</script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+<title>AnimateLib</title>
+<meta description="" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+<link href="css/aa-generic.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="css/aa-style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <div>
+        <h2>Text appearance</h2>
+        <h4>Slide up</h4>
+        <div class="textHolder">
+            <p class="aaTextSlideUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.</p>
+        </div>
+
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html1')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css1')">Css</button>
+            </div>
+            <div id="html1" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextSlideUp"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css1" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaTextSlideUp {<br>
+                        animation: slideInUp 1s forwards;<br>
+                    }<br>
+                    @keyframes slideInUp {<br>
+                        from {<br>
+                            -webkit-transform: translate3d(0, 100%, 0);<br>
+                            transform: translate3d(0, 100%, 0);<br>
+                            visibility: hidden;<br>
+                        }<br>
+                        to {<br>
+                            -webkit-transform: translate3d(0, 0, 0);<br>
+                            transform: translate3d(0, 0, 0);<br>
+                            visibility: visible;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <hr />
+
+        <h4>Slide down</h4>
+        <div class="textHolder">
+            <p class="aaTextSlideDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis</p>
+        </div>
+
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html2')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css2')">Css</button>
+            </div>
+            <div id="html2" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextSlideDown"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css2" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaTextSlideDown {<br>
+                        animation: slideInDown 1s forwards;<br>
+                    }<br>
+                    @keyframes slideInDown {<br>
+                        from {<br>
+                            -webkit-transform: translate3d(0, -100%, 0);<br>
+                            transform: translate3d(0, -100%, 0);<br>
+                            visibility: hidden;<br>
+                        }<br>
+                        to {<br>
+                            -webkit-transform: translate3d(0, 0, 0);<br>
+                            transform: translate3d(0, 0, 0);<br>
+                            visibility: visible;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <hr />
+
+        <h4>Slide to right</h4>
+        <div class="textHolder">
+            <p class="aaTextSlideRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis</p>
+        </div>
+
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html3')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css3')">Css</button>
+            </div>
+            <div id="html3" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextSlideRight"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css3" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaTextSlideRight {<br>
+                        animation: slideInRight 1s forwards;<br>
+                    }<br>
+                    @keyframes slideInRight {<br>
+                        from {<br>
+                            -webkit-transform: translate3d(-100%, 0, 0);<br>
+                            transform: translate3d(-100%, 0, 0);<br>
+                            visibility: hidden;<br>
+                        }<br>
+                        to {<br>
+                            -webkit-transform: translate3d(0, 0, 0);<br>
+                            transform: translate3d(0, 0, 0);<br>
+                            visibility: visible;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <hr />
+
+        <h4>Slide to left</h4>
+        <div class="textHolder">
+            <p class="aaTextSlideLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.</p>
+        </div>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html4')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css4')">Css</button>
+            </div>
+            <div id="html4" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextSlideLeft"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css4" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaTextSlideLeft {<br>
+                        animation: slideInLeft 1s forwards;<br>
+                    }<br>
+                    @keyframes slideInLeft {<br>
+                        from {<br>
+                            -webkit-transform: translate3d(100%, 0, 0);<br>
+                            transform: translate3d(100%, 0, 0);<br>
+                            visibility: hidden;<br>
+                        }<br>
+                        to {<br>
+                            -webkit-transform: translate3d(0, 0, 0);<br>
+                            transform: translate3d(0, 0, 0);<br>
+                            visibility: visible;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <hr />
+
+        <h4>Zoom in</h4>
+        <div class="textHolder">
+            <p class="aaTextZoomIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.</p>
+        </div>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html5')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css5')">Css</button>
+            </div>
+            <div id="html5" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextZoomIn"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css5" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaTextZoomIn {<br>
+                        animation: zoomIn 1s forwards;<br>
+                    }<br>
+                    @keyframes zoomIn {<br>
+                        from {<br>
+                            opacity: 0;<br>
+                            -webkit-transform: scale3d(0.3, 0.3, 0.3);<br>
+                            transform: scale3d(0.3, 0.3, 0.3);<br>
+                        }<br>
+                        50% {<br>
+                            opacity: 1;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <hr />
+
+        <h4>Zoom out</h4>
+        <div class="textHolder">
+            <p class="aaTextZoomOut">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.</p>
+        </div>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html6')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css6')">Css</button>
+            </div>
+            <div id="html6" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextZoomOut"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css6" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaTextZoomOut {<br>
+                        animation: zoomOut 2.5s forwards;<br>
+                    }<br>
+                    @keyframes zoomOut {<br>
+                        from {<br>
+                            opacity: 1;<br>
+                        }<br>
+                        50% {<br>
+                            opacity: 0;<br>
+                            -webkit-transform: scale3d(0.3, 0.3, 0.3);<br>
+                            transform: scale3d(0.3, 0.3, 0.3);<br>
+                        }<br>
+                        to {<br>
+                            opacity: 0;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <hr />
+
+        <h4>Fade-in</h4>
+        <div class="textHolder">
+            <p class="aaTextFadeIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.</p>
+        </div>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html7')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css7')">Css</button>
+            </div>
+            <div id="html7" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextFadeIn"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css7" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                    .aaTextFadeIn {<br>
+                        animation: fadeIn 1s forwards;<br>
+                    }<br>
+                    @keyframes fadeIn {<br>
+                        from {<br>
+                            opacity: 0;<br>
+                        }<br>
+                        to {<br>
+                            opacity: 1;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <hr />
+
+        <h4>Fade-out</h4>
+        <div class="textHolder">
+            <p class="aaTextFadeOut">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.</p>
+        </div>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'html8')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'css8')">Css</button>
+            </div>
+            <div id="html8" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
+                    &lt;p class="aaTextFadeOut"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ipsum sit amet mauris lobortis, gravida tincidunt ante dictum. Nam egestas mi sed vestibulum lobortis. Fusce at arcu risus. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a purus sed odio gravida viverra non vel ligula. Phasellus placerat libero vel mattis facilisis.&lt;/p&gt;
+                </code>
+            </div>
+            <div id="css8" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
+                        .aaTextFadeOut {<br>
+                            animation: fadeOut 2.5s forwards;<br>
+                        }<br>
+                        @keyframes fadeOut {<br>
+                            from {<br>
+                                opacity: 1;<br>
+                            }<br>
+                            to {<br>
+                                opacity: 0;<br>
+                            }<br>
+                        }
+                </code>
+            </div>
+        </div>
+    </div>
+    <ul class="nav">
+        <li><a href="index.html">Home page</a></li>
+        <li class="active"><a href="fade-directions.html">Fade directions</a></li>
+        <li><a href="parallax.html">Parallax effects</a></li>
+        <li><a href="skelletons.html">Skelletons</a></li>
+    </ul>
+    
+<script src="aa-script.js"></script>
+</body>
+</html>
