@@ -1,0 +1,184 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #000;
+    width: 100%;
+    height: 100%;
+}
+
+ul.unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img { max-width: 100%; }
+.tabs { margin: 1.5rem auto 1rem auto; display: inline-block; }
+.tabcontent {
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+code { font-size: 0.9rem; }
+.code {
+    background: #282c34;
+    color: rgb(233, 233, 233);
+    position: relative;
+    padding: 1rem;
+}
+.message {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0;
+    clear: both;
+    display: inline-block;
+    font-size: 0.85rem;
+}
+.message.info {
+    background: #BDE5F8;
+    color: rgb(16, 60, 99);
+}
+.message.warning {
+    background: #FEEFB3;
+    color: #9F6000;
+}
+.message.error {
+    background: #FFD2D2;
+    color: #D8000C;
+}
+ul.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    list-style: none;
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+    background: rgb(235, 235, 235);
+}
+ul.nav li {
+    display: inline;
+    padding: 0.75rem 0.75rem;
+}
+ul.nav li a { color: #000; }
+ul.nav li.active a, ul.nav li:hover a { opacity: 0.6; }
+ul.nav li.active a { text-decoration: none; }
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.tab button:hover { background-color: #ddd; }
+.tab button.active { background-color: #ccc; }
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#menuButtons {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#menuButtons ul li {
+    margin: 1rem;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+#menuButtons ul li span.sub {
+    opacity: 0.7;
+    font-size: 0.85rem;
+    display: block;
+}
+button.hamburger { margin: 1.5rem auto; }
+#menuButtons .tabs {
+    clear: both;
+    float: left;
+    width: 320px;
+    max-width: 320px;
+    text-align: left;
+}
+
+.aaFromLeft {
+    border: 1px solid rgba(0,0,0,0.2);
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.aaFromLeft { background: #f7f7fc; }
+.aaFromLeft .logo { 
+    background: #2e3192;
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+.aaFromLeft .hero {
+    background: #ffb749;
+    padding: 13rem 1.25rem;
+    text-align: center;
+}
+.showLate { 
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+}
+.showLate.aanimate { visibility: visible; }
+.showLate li {
+    display: inline-block;
+    width: 20%;
+    height: 2rem;
+    margin: 2rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.textHolder {
+    display: inline-block;
+    background: rgba(0,0,0,0.05);
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+#parallax { 
+    height: 30rem; 
+    overflow: hidden;
+}
+.sampleParallaxNav, .sampleParallaxContentBlock {
+    background: #f7f7fc;
+    padding: 1rem;
+}
+.sampleParallaxContentBlock { 
+    top: 0px;
+    height: 15rem;
+}
+.sampleParallaxNav h3 { display: inline; }
+.sampleParallaxNav ul { 
+    list-style: none; 
+    display: inline-block;
+}
+.sampleParallaxNav ul li { display: inline-block; margin-right: 1rem; }
