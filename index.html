@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
-<title>AnimateLib</title>
-<meta description="" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-<link href="css/aa-generic.css" media="screen" rel="stylesheet" type="text/css"/>
-<link href="css/aa-style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>AnimateLib</title>
+    <meta description="" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="css/aa-generic.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/aa-style.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-<div class="main-container">
-    <div id="menuButtons">
-        <h2>Hamburger buttons</h2>
-        <p class="message info">Hover the button to see the animation.</p>
-        <ul class="unstyled">
-            <li>
-                <button class="aa hamburger regClose">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <span class="sub">Regular close</span>
-                <div class="tabs source">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'html1')">Html</button>
-                        <button class="tablinks" onclick="openTab(event, 'css1')">Css</button>
-                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
-                    </div>
-                    <div id="x" class="tabcontent"></div>
-                    <div id="html1" class="tabcontent code">
-                        <h3>HTML</h3>
-                        <code>
+    <div class="main-container">
+        <div id="menuButtons">
+            <h2>Hamburger buttons</h2>
+            <p class="message info">Hover the button to see the animation.</p>
+            <ul class="unstyled">
+                <li>
+                    <button class="aa hamburger regClose">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <span class="sub">Regular close</span>
+                    <div class="tabs source">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab(event, 'html1')">Html</button>
+                            <button class="tablinks" onclick="openTab(event, 'css1')">Css</button>
+                            <button class="tablinks" onclick="openTab(event, 'js1')">JS</button>
+                            <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                        </div>
+                        <div id="x" class="tabcontent"></div>
+                        <div id="html1" class="tabcontent code">
+                            <h3>HTML</h3>
+                            <code>
                             &lt;button class="aa hamburger regClose"&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;/button&gt;
                         </code>
-                    </div>
-                    <div id="css1" class="tabcontent code">
-                        <h3>Cascading Style Sheets</h3>
-                        <code>
+                        </div>
+                        <div id="css1" class="tabcontent code">
+                            <h3>Cascading Style Sheets</h3>
+                            <code>
                             .aa.hamburger {<br>
                                 width: 3rem;<br>
                                 height: 1.75rem;<br>
@@ -75,36 +78,52 @@
                                 transform: translateY(-0.85rem) translateX(0) rotate(-45deg);<br>
                             }
                         </code>
+                        </div>
+                        <div id="js1" class="tabcontent code">
+                            <h3>Javascrit</h3>
+                            <code>
+                                var hamburger = document.querySelectorAll('.aa.hamburger');<br>
+                                <br>
+                                var toggleActive = function() {<br>
+                                    this.classList.toggle('active');<br>
+                                    return false;<br>
+                                }<br>
+                                <br>
+                                for(i=0; i&lt;hamburger.length; i++) {<br>
+                                    hamburger[i].addEventListener("click", toggleActive);<br>
+                                }<br>
+                            </code>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <button class="aa hamburger arrowLeft">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <span class="sub">Arrow left</span>
-                <div class="tabs source">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'html2')">Html</button>
-                        <button class="tablinks" onclick="openTab(event, 'css2')">Css</button>
-                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
-                    </div>
-                    <div id="x" class="tabcontent"></div>
-                    <div id="html2" class="tabcontent code">
-                        <h3>HTML</h3>
-                        <code>
-                            &lt;button class="aa hamburger regClose"&gt;
+                </li>
+                <li>
+                    <button class="aa hamburger arrowLeft">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <span class="sub">Arrow left</span>
+                    <div class="tabs source">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab(event, 'html2')">Html</button>
+                            <button class="tablinks" onclick="openTab(event, 'css2')">Css</button>
+                            <button class="tablinks" onclick="openTab(event, 'js2')">JS</button>
+                            <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                        </div>
+                        <div id="x" class="tabcontent"></div>
+                        <div id="html2" class="tabcontent code">
+                            <h3>HTML</h3>
+                            <code>
+                            &lt;button class="aa hamburger arrowLeft"&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;/button&gt;
                         </code>
-                    </div>
-                    <div id="css2" class="tabcontent code">
-                        <h3>Cascading Style Sheets</h3>
-                        <code>
+                        </div>
+                        <div id="css2" class="tabcontent code">
+                            <h3>Cascading Style Sheets</h3>
+                            <code>
                             .aa.hamburger {<br>
                                 width: 3rem;<br>
                                 height: 1.75rem;<br>
@@ -137,36 +156,52 @@
                                 transform: translate3d(-0.8rem, 0, 0) rotate(45deg) scale(0.7, 1) translateY(-0.25rem);<br>
                             }<br>
                         </code>
+                        </div>
+                        <div id="js2" class="tabcontent code">
+                            <h3>Javascrit</h3>
+                            <code>
+                                var hamburger = document.querySelectorAll('.aa.hamburger');<br>
+                                <br>
+                                var toggleActive = function() {<br>
+                                    this.classList.toggle('active');<br>
+                                    return false;<br>
+                                }<br>
+                                <br>
+                                for(i=0; i&lt;hamburger.length; i++) {<br>
+                                    hamburger[i].addEventListener("click", toggleActive);<br>
+                                }<br>
+                            </code>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <button class="aa hamburger arrowDown">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <span class="sub">Arrow down</span>
-                <div class="tabs source">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'html3')">Html</button>
-                        <button class="tablinks" onclick="openTab(event, 'css3')">Css</button>
-                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
-                    </div>
-                    <div id="x" class="tabcontent"></div>
-                    <div id="html3" class="tabcontent code">
-                        <h3>HTML</h3>
-                        <code>
+                </li>
+                <li>
+                    <button class="aa hamburger arrowDown">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <span class="sub">Arrow down</span>
+                    <div class="tabs source">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab(event, 'html3')">Html</button>
+                            <button class="tablinks" onclick="openTab(event, 'css3')">Css</button>
+                            <button class="tablinks" onclick="openTab(event, 'js3')">JS</button>
+                            <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                        </div>
+                        <div id="x" class="tabcontent"></div>
+                        <div id="html3" class="tabcontent code">
+                            <h3>HTML</h3>
+                            <code>
                             &lt;button class="aa hamburger arrowDown"&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;/button&gt;
                         </code>
-                    </div>
-                    <div id="css3" class="tabcontent code">
-                        <h3>Cascading Style Sheets</h3>
-                        <code>
+                        </div>
+                        <div id="css3" class="tabcontent code">
+                            <h3>Cascading Style Sheets</h3>
+                            <code>
                             .aa.hamburger {<br>
                                 width: 3rem;<br>
                                 height: 1.75rem;<br>
@@ -202,36 +237,52 @@
                             .aa.hamburger.arrowDown.active span:nth-child(2) { transform: rotate(-180deg); }<br>
                             .aa.hamburger.arrowDown.active { transform: rotate(-90deg); }<br>
                         </code>
+                        </div>
+                        <div id="js3" class="tabcontent code">
+                            <h3>Javascrit</h3>
+                            <code>
+                                var hamburger = document.querySelectorAll('.aa.hamburger');<br>
+                                <br>
+                                var toggleActive = function() {<br>
+                                    this.classList.toggle('active');<br>
+                                    return false;<br>
+                                }<br>
+                                <br>
+                                for(i=0; i&lt;hamburger.length; i++) {<br>
+                                    hamburger[i].addEventListener("click", toggleActive);<br>
+                                }<br>
+                            </code>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <button class="aa hamburger spin">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <span class="sub">Rotate</span>
-                <div class="tabs source">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'html4')">Html</button>
-                        <button class="tablinks" onclick="openTab(event, 'css4')">Css</button>
-                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
-                    </div>
-                    <div id="x" class="tabcontent"></div>
-                    <div id="html4" class="tabcontent code">
-                        <h3>HTML</h3>
-                        <code>
+                </li>
+                <li>
+                    <button class="aa hamburger spin">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <span class="sub">Rotate</span>
+                    <div class="tabs source">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab(event, 'html4')">Html</button>
+                            <button class="tablinks" onclick="openTab(event, 'css4')">Css</button>
+                            <button class="tablinks" onclick="openTab(event, 'js4')">JS</button>
+                            <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                        </div>
+                        <div id="x" class="tabcontent"></div>
+                        <div id="html4" class="tabcontent code">
+                            <h3>HTML</h3>
+                            <code>
                             &lt;button class="aa hamburger spin"&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;/button&gt;
                         </code>
-                    </div>
-                    <div id="css4" class="tabcontent code">
-                        <h3>Cascading Style Sheets</h3>
-                        <code>
+                        </div>
+                        <div id="css4" class="tabcontent code">
+                            <h3>Cascading Style Sheets</h3>
+                            <code>
                             .aa.hamburger {<br>
                                 width: 3rem;<br>
                                 height: 1.75rem;<br>
@@ -274,36 +325,52 @@
                                 transition: top 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);<br>
                             }<br>
                         </code>
+                        </div>
+                        <div id="js4" class="tabcontent code">
+                            <h3>Javascrit</h3>
+                            <code>
+                                var hamburger = document.querySelectorAll('.aa.hamburger');<br>
+                                <br>
+                                var toggleActive = function() {<br>
+                                    this.classList.toggle('active');<br>
+                                    return false;<br>
+                                }<br>
+                                <br>
+                                for(i=0; i&lt;hamburger.length; i++) {<br>
+                                    hamburger[i].addEventListener("click", toggleActive);<br>
+                                }<br>
+                            </code>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <button class="aa hamburger collapseToX">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <span class="sub">Collapse to X</span>
-                <div class="tabs source">
-                    <div class="tab">
-                        <button class="tablinks" onclick="openTab(event, 'html5')">Html</button>
-                        <button class="tablinks" onclick="openTab(event, 'css5')">Css</button>
-                        <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
-                    </div>
-                    <div id="x" class="tabcontent"></div>
-                    <div id="html5" class="tabcontent code">
-                        <h3>HTML</h3>
-                        <code>
+                </li>
+                <li>
+                    <button class="aa hamburger collapseToX">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <span class="sub">Collapse to X</span>
+                    <div class="tabs source">
+                        <div class="tab">
+                            <button class="tablinks" onclick="openTab(event, 'html5')">Html</button>
+                            <button class="tablinks" onclick="openTab(event, 'css5')">Css</button>
+                            <button class="tablinks" onclick="openTab(event, 'js5')">JS</button>
+                            <button class="tablinks" onclick="openTab(event, 'x')">Close</button>
+                        </div>
+                        <div id="x" class="tabcontent"></div>
+                        <div id="html5" class="tabcontent code">
+                            <h3>HTML</h3>
+                            <code>
                             &lt;button class="aa hamburger collapseToX"&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;span>&lt;/span&gt;
                             &lt;/button&gt;
                         </code>
-                    </div>
-                    <div id="css5" class="tabcontent code">
-                        <h3>Cascading Style Sheets</h3>
-                        <code>
+                        </div>
+                        <div id="css5" class="tabcontent code">
+                            <h3>Cascading Style Sheets</h3>
+                            <code>
                             .aa.hamburger {<br>
                                 width: 3rem;<br>
                                 height: 1.75rem;<br>
@@ -345,30 +412,46 @@
                                 transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);<br>
                             }<br>
                         </code>
+                        </div>
+                        <div id="js5" class="tabcontent code">
+                            <h3>Javascrit</h3>
+                            <code>
+                                var hamburger = document.querySelectorAll('.aa.hamburger');<br>
+                                <br>
+                                var toggleActive = function() {<br>
+                                    this.classList.toggle('active');<br>
+                                    return false;<br>
+                                }<br>
+                                <br>
+                                for(i=0; i&lt;hamburger.length; i++) {<br>
+                                    hamburger[i].addEventListener("click", toggleActive);<br>
+                                }<br>
+                            </code>
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
-    </div><!-- hamburger buttons -->
+                </li>
+            </ul>
+        </div><!-- hamburger buttons -->
 
-    <h2>Product reveal animation</h2><p class="message info">Click on the product to see the effect</p>
-    <section id="revealAnim">
-		<div class="images-container">
-			<img class="front" src="images/img_iphone_front.png" alt="iPhone">
-			<img class="back" src="images/img_iphone_back.png" alt="iPhone">
-			<img class="side" src="images/img_iphone_side.png" alt="iPhone">
-		</div>
-    </section>
-    <div class="tabs source">
-        <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'revealAnim-html')">Html</button>
-            <button class="tablinks" onclick="openTab(event, 'revealAnim-css')">Css</button>
-            <button class="tablinks" onclick="openTab(event, 'revealAnim-js')">Js</button>
-            <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
-        </div>
-        <div id="revealAnim-html" class="tabcontent code">
-            <h3>HTML</h3>
-            <code>
+        <h2>Product reveal animation</h2>
+        <p class="message info">Click on the product to see the effect</p>
+        <section id="revealAnim">
+            <div class="images-container">
+                <img class="front" src="images/img_iphone_front.png" alt="iPhone">
+                <img class="back" src="images/img_iphone_back.png" alt="iPhone">
+                <img class="side" src="images/img_iphone_side.png" alt="iPhone">
+            </div>
+        </section>
+        <div class="tabs source">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'revealAnim-html')">Html</button>
+                <button class="tablinks" onclick="openTab(event, 'revealAnim-css')">Css</button>
+                <button class="tablinks" onclick="openTab(event, 'revealAnim-js')">Js</button>
+                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            </div>
+            <div id="revealAnim-html" class="tabcontent code">
+                <h3>HTML</h3>
+                <code>
                 &lt;div class="hasAnimation aaFromLeft"&gt;<br>
                 &lt;section id="revealAnim"&gt;<br>
                 &lt;div class="images-container"&gt;<br>
@@ -377,11 +460,12 @@
                 &lt;img class="side" src="images/img_iphone_side.png" alt="iPhone"&gt;<br>
                 &lt;/div&gt;<br>
                 &lt;/section&gt;<br>
+                &lt;/div&gt;<br>
             </code>
-        </div>
-        <div id="revealAnim-css" class="tabcontent code">
-            <h3>Cascading Style Sheets</h3>
-            <code>
+            </div>
+            <div id="revealAnim-css" class="tabcontent code">
+                <h3>Cascading Style Sheets</h3>
+                <code>
                 #revealAnim {<br>
                     position: relative;<br>
                     width: 960px;<br>
@@ -408,10 +492,10 @@
                 #revealAnim img { transition: transform .5s .7s; }<br>
                 #revealAnim.active .images-container img { transform: translate3d(0, 0, 0); }<br>
             </code>
-        </div>
-        <div id="revealAnim-js" class="tabcontent code">
-            <h3>Javascrit</h3>
-            <code>
+            </div>
+            <div id="revealAnim-js" class="tabcontent code">
+                <h3>Javascrit</h3>
+                <code>
                 var revealAnim = document.querySelectorAll('#revealAnim');<br>
                 <br>
                 var toggleActive = function() {<br>
@@ -422,32 +506,32 @@
                     revealAnim[i].addEventListener("click", toggleActive);<br>
                 }<br>
             </code>
-        </div>
-    </div>
-
-    <div id="showOnScroll">
-        <h2>Content on scroll</h2>
-        <h4>Show content from left</h4>
-        <div class="hasAnimation aaFromLeft">
-            <div class="logo">LOGO</div>
-            <div class="hero">You're looking at the hero block, please keep scrolling.</div>
-            <ul class="unstyled showLate">
-                <li class="aachildren wait025">Item 1</li>
-                <li class="aachildren wait05">Item 2</li>
-                <li class="aachildren wait10">Item 3</li>
-                <li class="aachildren wait125">Item 4</li>
-            </ul>
-        </div>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'html6')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'css6')">Css</button>
-                <button class="tablinks" onclick="openTab(event, 'js6')">Js</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
             </div>
-            <div id="html6" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+        </div>
+
+        <div id="showOnScroll">
+            <h2>Content on scroll</h2>
+            <h4>Show content from left</h4>
+            <div class="hasAnimation aaFromLeft">
+                <div class="logo">LOGO</div>
+                <div class="hero">You're looking at the hero block, please keep scrolling.</div>
+                <ul class="unstyled showLate">
+                    <li class="aachildren wait025">Item 1</li>
+                    <li class="aachildren wait05">Item 2</li>
+                    <li class="aachildren wait10">Item 3</li>
+                    <li class="aachildren wait125">Item 4</li>
+                </ul>
+            </div>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'html6')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'css6')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, 'js6')">Js</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="html6" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;div class="hasAnimation aaFromLeft"&gt;<br>
                             &lt;div class="logo"&gt;LOGO&lt;/div&gt;<br>
                         &lt;div class="hero"&gt;You're looking at the hero block, please keep scrolling.&lt;/div&gt;<br>
@@ -459,10 +543,10 @@
                         &lt;/ul&gt;<br>
                     &lt;/div&gt;<br>
                 </code>
-            </div>
-            <div id="css6" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="css6" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaFromLeft {<br>
                         border: 1px solid rgba(0,0,0,0.2);<br>
                         height: 500px;<br>
@@ -544,10 +628,10 @@
                         }<br>
                     }<br>
                 </code>
-            </div>
-            <div id="js6" class="tabcontent code">
-                <h3>Javascrit</h3>
-                <code>
+                </div>
+                <div id="js6" class="tabcontent code">
+                    <h3>Javascrit</h3>
+                    <code>
                     /* show and animate elements on the page on scroll */<br>
                     var containerWithAnimateEl = document.querySelectorAll('.hasAnimation');<br>
                     console.log(containerWithAnimateEl[0].scrollTop);<br>
@@ -563,32 +647,32 @@
                         });<br>
                     }<br>
                 </code>
+                </div>
             </div>
-        </div>
 
-        <h2>Image effects</h2>
-        <h4>Zoom on scroll</h4>
-        <div id="demoIMG1" class="aaImgZoom">
-            <img src="images/demo/product.png"/>
-        </div>
-        <br>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'html7')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'css7')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            <h2>Image effects</h2>
+            <h4>Zoom on scroll</h4>
+            <div id="demoIMG1" class="aaImgZoom">
+                <img src="images/demo/product.png" />
             </div>
-            <div id="html7" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <br>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'html7')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'css7')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="html7" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;div id="demoIMG1" class="aaImgZoom"&gt;<br>
                         &lt;img src="images/demo/product.png"/&gt;<br>
                     &lt;/div&gt;<br>
                 </code>
-            </div>
-            <div id="css7" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="css7" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaImgZoom { text-align: center; }<br>
                     .aaImgZoom img {<br>
                         transition: all 0.6s;<br>
@@ -605,27 +689,27 @@
                         display: inline-block;<br>
                     }<br>
                 </code>
+                </div>
             </div>
-        </div>
-        <br>
+            <br>
 
-        <img src="images/demo/product1.png" id="demoIMG2" class="aaImgZoom fullRounded"/>
-        <br>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'demoIMG2-html')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'demoIMG2-css')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
-            </div>
-            <div id="demoIMG2-html" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <img src="images/demo/product1.png" id="demoIMG2" class="aaImgZoom fullRounded" />
+            <br>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'demoIMG2-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'demoIMG2-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="demoIMG2-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;img src="images/demo/product1.png" id="demoIMG2" class="aaImgZoom fullRounded"/&gt;<br>
                 </code>
-            </div>
-            <div id="demoIMG2-css" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="demoIMG2-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaImgZoom { text-align: center; }<br>
                     img.aaImgZoom {<br>
                         transition: all 0.6s;<br>
@@ -648,31 +732,31 @@
                         overflow: hidden;<br>
                     }<br>
                 </code>
+                </div>
             </div>
-        </div>
-        <br>
+            <br>
 
-        <h4>Dynamic image</h4>
-        <div id="demoIMG3">
-            <img src="images/demo/demo1.jpg"/>
-        </div>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'demoIMG3-html')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'demoIMG3-css')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+            <h4>Dynamic image</h4>
+            <div id="demoIMG3">
+                <img src="images/demo/demo1.jpg" />
             </div>
-            <div id="demoIMG3-html" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'demoIMG3-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'demoIMG3-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="demoIMG3-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;div id="demoIMG3"&gt;<br>
                     &lt;img src="images/demo/demo1.jpg"/&gt;<br>
                     &lt;/div&gt;<br>
                 </code>
-            </div>
-            <div id="demoIMG3-css" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="demoIMG3-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     #demoIMG3 { <br>
                         position: relative;<br>
                         width: 50%;<br>
@@ -697,28 +781,28 @@
                         }<br>
                     }<br>
                 </code>
+                </div>
             </div>
-        </div>
 
-        <h2>Buttons</h2>
-        <h4>Bouncing border + pulse</h4>
-        <a href="#" class="aaBtnRight aaBorderBounce"><img src="images/demo/arrow.svg" alt="Forward"/></a>
-        <br>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'aaBtnRight-html')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'aaBtnRight-css')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
-            </div>
-            <div id="aaBtnRight-html" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <h2>Buttons</h2>
+            <h4>Bouncing border + pulse</h4>
+            <a href="#" class="aaBtnRight aaBorderBounce"><img src="images/demo/arrow.svg" alt="Forward" /></a>
+            <br>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnRight-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnRight-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="aaBtnRight-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;a href="#" class="aaBtnRight aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Forward"/&gt;&lt;/a&gt;<br>
                 </code>
-            </div>
-            <div id="aaBtnRight-css" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="aaBtnRight-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaBorderBounce img {<br>
                         width: 40%;<br>
                         vertical-align: middle;<br>
@@ -773,27 +857,27 @@
                         animation: pulse 0.75s forwards;<br>
                     }<br>
                 </code>
+                </div>
             </div>
-        </div>
-        <br>
+            <br>
 
-        <a href="#" class="aaBtnLeft aaBorderBounce"><img src="images/demo/arrow.svg" alt="Back"/></a>
-        <br>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'aaBtnLeft-html')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'aaBtnLeft-css')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
-            </div>
-            <div id="aaBtnLeft-html" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <a href="#" class="aaBtnLeft aaBorderBounce"><img src="images/demo/arrow.svg" alt="Back" /></a>
+            <br>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnLeft-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnLeft-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="aaBtnLeft-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;a href="#" class="aaBtnLeft aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Back"/&gt;&lt;/a&gt;<br>
                 </code>
-            </div>
-            <div id="aaBtnLeft-css" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="aaBtnLeft-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaBorderBounce img {<br>
                         width: 40%;<br>
                         vertical-align: middle;<br>
@@ -849,27 +933,27 @@
                     }<br>
                     .aaBtnLeft { transform: rotate(180deg); }<br>
                 </code>
+                </div>
             </div>
-        </div>
-        <br>
+            <br>
 
-        <a href="#" class="aaBtnTop aaBorderBounce"><img src="images/demo/arrow.svg" alt="Up"/></a>
-        <br>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'aaBtnTop-html')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'aaBtnTop-css')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
-            </div>
-            <div id="aaBtnTop-html" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <a href="#" class="aaBtnTop aaBorderBounce"><img src="images/demo/arrow.svg" alt="Up" /></a>
+            <br>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnTop-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnTop-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="aaBtnTop-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;a href="#" class="aaBtnTop aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Up"/&gt;&lt;/a&gt;<br>
                 </code>
-            </div>
-            <div id="aaBtnTop-css" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="aaBtnTop-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaBorderBounce img {<br>
                         width: 40%;<br>
                         vertical-align: middle;<br>
@@ -925,27 +1009,27 @@
                     }<br>
                     .aaBtnTop { transform: rotate(270deg); }<br>
                 </code>
+                </div>
             </div>
-        </div>
-        <br>
+            <br>
 
-        <a href="#" class="aaBtnBottom aaBorderBounce"><img src="images/demo/arrow.svg" alt="Down"/></a>
-        <br>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'aaBtnBottom-html')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'aaBtnBottom-css')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
-            </div>
-            <div id="aaBtnBottom-html" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <a href="#" class="aaBtnBottom aaBorderBounce"><img src="images/demo/arrow.svg" alt="Down" /></a>
+            <br>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnBottom-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'aaBtnBottom-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="aaBtnBottom-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;a href="#" class="aaBtnBottom aaBorderBounce"&gt;&lt;img src="images/demo/arrow.svg" alt="Down"/&gt;&lt;/a&gt;<br>
                 </code>
-            </div>
-            <div id="aaBtnBottom-css" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="aaBtnBottom-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaBorderBounce img {<br>
                         width: 40%;<br>
                         vertical-align: middle;<br>
@@ -1001,27 +1085,27 @@
                     }<br>
                     .aaBtnBottom { transform: rotate(90deg); }<br>
                 </code>
+                </div>
             </div>
-        </div>
-        <br><br>
+            <br><br>
 
-        <a href="#" class="aaBtnLink aaBottomBorder">Link with bottom border</a>
-        <br>
-        <div class="tabs source">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'aaBottomBorder-html')">Html</button>
-                <button class="tablinks" onclick="openTab(event, 'aaBottomBorder-css')">Css</button>
-                <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
-            </div>
-            <div id="aaBottomBorder-html" class="tabcontent code">
-                <h3>HTML</h3>
-                <code>
+            <a href="#" class="aaBtnLink aaBottomBorder">Link with bottom border</a>
+            <br>
+            <div class="tabs source">
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'aaBottomBorder-html')">Html</button>
+                    <button class="tablinks" onclick="openTab(event, 'aaBottomBorder-css')">Css</button>
+                    <button class="tablinks" onclick="openTab(event, ' ')">Close</button>
+                </div>
+                <div id="aaBottomBorder-html" class="tabcontent code">
+                    <h3>HTML</h3>
+                    <code>
                     &lt;a href="#" class="aaBtnLink aaBottomBorder"&gt;Link with bottom border&lt;/a&gt;<br>
                 </code>
-            </div>
-            <div id="aaBaaBottomBordertnBottom-css" class="tabcontent code">
-                <h3>Cascading Style Sheets</h3>
-                <code>
+                </div>
+                <div id="aaBottomBorder-css" class="tabcontent code">
+                    <h3>Cascading Style Sheets</h3>
+                    <code>
                     .aaBtnLink.aaBottomBorder {<br>
                         display: inline-block;<br>
                         position: relative;<br>
@@ -1043,54 +1127,55 @@
                         transition: transform .8s cubic-bezier(.165,.84,.44,1);<br>
                     }<br>
                     .aaBtnLink.aaBottomBorder:hover { color: #242a3a; }<br>
-                    .aaBtnLink.aaBottomBorder:hover::after { transform: scaleX(1); <br>
+                    .aaBtnLink.aaBottomBorder:hover::after { transform: scaleX(1); }<br>
                 </code>
+                </div>
             </div>
+            <br>
         </div>
-        <br>
+        <ul class="nav">
+            <li class="active"><a href="index.html">Home page</a></li>
+            <li><a href="hover-effects.html">Hover effects</a></li>
+            <li><a href="fade-directions.html">Fade directions</a></li>
+            <li><a href="parallax.html">Parallax effects</a></li>
+            <li><a href="skelletons.html">Skelletons</a></li>
+        </ul>
     </div>
-    <ul class="nav">
-        <li class="active"><a href="index.html">Home page</a></li>
-        <li><a href="hover-effects.html">Hover effects</a></li>
-        <li><a href="fade-directions.html">Fade directions</a></li>
-        <li><a href="parallax.html">Parallax effects</a></li>
-        <li><a href="skelletons.html">Skelletons</a></li>
-    </ul>
-</div>
 
-<script src="aa-script.js"></script>
-<script>
-    /* hamburger buttons begin */
-    var hamburger = document.querySelectorAll('.aa.hamburger');
-    var revealAnim = document.querySelectorAll('#revealAnim');
+    <script src="aa-script.js"></script>
+    <script>
+        /* hamburger buttons begin */
+        var hamburger = document.querySelectorAll('.aa.hamburger');
+        var revealAnim = document.querySelectorAll('#revealAnim');
 
-    var toggleActive = function() {
-        this.classList.toggle('active');
-        return false;
-    }
-
-    for(i=0; i<hamburger.length; i++) {
-        hamburger[i].addEventListener("click", toggleActive);
-    }
-    for(i=0; i<revealAnim.length; i++) {
-        revealAnim[i].addEventListener("click", toggleActive);
-    }
-
-
-    /* show and animate elements on the page on scroll */
-    var containerWithAnimateEl = document.querySelectorAll('.hasAnimation');
-    console.log(containerWithAnimateEl[0].scrollTop);
-    for(i=0; i<containerWithAnimateEl.length; i++) {
-        containerWithAnimateEl[i].addEventListener('scroll', function(){
-            if(this.scrollTop > 100 ) {
-                document.querySelector('.showLate').classList.add('aanimate');
-            } 
-            if(this.scrollTop < 100) {
-                document.querySelector('.showLate').classList.remove('aanimate');
-            }
+        var toggleActive = function () {
+            this.classList.toggle('active');
             return false;
-        });
-    }
-</script>
+        }
+
+        for (i = 0; i < hamburger.length; i++) {
+            hamburger[i].addEventListener("click", toggleActive);
+        }
+        for (i = 0; i < revealAnim.length; i++) {
+            revealAnim[i].addEventListener("click", toggleActive);
+        }
+
+
+        /* show and animate elements on the page on scroll */
+        var containerWithAnimateEl = document.querySelectorAll('.hasAnimation');
+        console.log(containerWithAnimateEl[0].scrollTop);
+        for (i = 0; i < containerWithAnimateEl.length; i++) {
+            containerWithAnimateEl[i].addEventListener('scroll', function () {
+                if (this.scrollTop > 100) {
+                    document.querySelector('.showLate').classList.add('aanimate');
+                }
+                if (this.scrollTop < 100) {
+                    document.querySelector('.showLate').classList.remove('aanimate');
+                }
+                return false;
+            });
+        }
+    </script>
 </body>
+
 </html>

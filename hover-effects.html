@@ -34,74 +34,6 @@
                 </li>
             </ul>
         </div>
-        <style>
-        .hoverslider { width: 580px; } 
-        .hoverslider .main-img {
-            width: 580px;
-            height: 660px;
-            overflow: hidden;
-            position: relative;
-        }
-        .hoverslider .main-img img { 
-            width: 100%; 
-            max-width: 100%;
-            display: none;
-        }
-        .hoverslider .main-img img:first-child { display: block; }
-        .hoverslider .content {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            width: calc(100%);
-            display: flex;
-            flex-direction: row;
-            z-index: 2;
-            position: relative;
-        }
-        .hoverslider .content li {
-            padding: 1rem;
-            opacity: 0.5;
-        }
-        .hoverslider .content li.active, .hoverslider .content li:hover {
-            opacity: 1;
-        }
-        .hoverslider .content li.active::before {
-            content: '';
-            display: block;
-            left: 0;
-            right: 0;
-            top: 0;
-            width: 50%;
-            bottom: 0;
-            background: #ccc;
-            position: absolute;
-            z-index: -1;
-        }
-        .hoverslider .content li.active:first-child::before { 
-            animation: move-to-left 0.35s forwards;
-            /*right: 50%;*/
-        }
-        .hoverslider .content li.active:nth-child(2)::before { 
-            /*left: 50%;*/
-            animation: move-to-right 0.35s forwards;
-        }
-        @keyframes move-to-right {
-            from {
-                left: 0%;
-            } 
-            to {
-                left: 50%;
-            }
-        }
-        @keyframes move-to-left {
-            from {
-                left: 50%;
-            } 
-            to {
-                left: 0%;
-            }
-        }
-        </style>
         <script>
             var getHLtiles = Array.from(document.querySelectorAll('ul.content li'));
             var getImgs = Array.from(document.querySelectorAll('.main-img img'));
@@ -134,43 +66,125 @@
 
     <div class="tabs source">
         <div class="tab">
-            <button class="tablinks" onclick="openTab(event, 'html')">Html</button>
-            <button class="tablinks" onclick="openTab(event, 'css')">Css</button>
-            <button class="tablinks" onclick="openTab(event, 'js')">Js</button>
+            <button class="tablinks" onclick="openTab(event, 'html1')">Html</button>
+            <button class="tablinks" onclick="openTab(event, 'css1')">Css</button>
+            <button class="tablinks" onclick="openTab(event, 'js1')">Js</button>
         </div>
-        <div id="html" class="tabcontent code">
+        <div id="html1" class="tabcontent code">
             <h3>HTML</h3>
             <code>
-                &lt;div class="aaSkeleton container"&gt;<br>
-                    &lt;section class="card"&gt;<br>
-                        &lt;figure class="card-image loading"&gt;&lt;/figure&gt;<br>
-                        &lt;div class="card-details"&gt;<br>
-                            &lt;h3 class="card-title loading"&gt;&lt;/h3&gt;<br>
-                            &lt;p class="card-description loading"&gt;&lt;/p&gt;<br>
-                        &lt;/div&gt;<br>
-                    &lt;/section&gt;<br>
+                &lt;div class="hoverslider container"&gt;<br>
+                    &lt;div class="main-img"&gt;<br>
+                        &lt;img src="images/demo/productPhoto1.jpg"/&gt;<br>
+                        &lt;img src="images/demo/productPhoto2.jpg"/&gt;<br>
                     &lt;/div&gt;<br>
+                    &lt;ul class="content"&gt;<br>
+                        &lt;li class="active"&gt;<br>
+                            &lt;a href="#" class="leadlink"&gt;Featured product ->&lt;/a&gt;<br>
+                            &lt;h3&gt;Title 1 title&lt;/h3&gt;<br>
+                            &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam iste earum fuga voluptatum ipsum nisi quasi fugiat...&lt;/p&gt;<br>
+                            &lt;a href="#"&gt;View more&lt;/a&gt;<br>
+                        &lt;/li&gt;<br>
+                        &lt;li&gt;<br>
+                            &lt;a href="#" class="leadlink"&gt;Featured product ->&lt;/a&gt;<br>
+                            &lt;h3&gt;Tile 2 title&lt;/h3&gt;<br>
+                            &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quisquam iste earum fuga voluptatum ipsum nisi quasi fugiat...&lt;/p&gt;<br>
+                            &lt;a href="#"&gt;View more&lt;/a&gt;<br>
+                        &lt;/li&gt;<br>
+                    &lt;/ul&gt;<br>
+                &lt;/div&gt;<br>
             </code>
         </div>
-        <div id="css" class="tabcontent code">
+        <div id="css1" class="tabcontent code">
             <h3>Cascading Style Sheets</h3>
             <code>
-                .aaSkeleton .card {<br>
+                .hoverslider { width: 580px; }<br>
+                .hoverslider .main-img {<br>
+                    width: 580px;<br>
+                    height: 660px;<br>
                     overflow: hidden;<br>
-                    background: #fff;<br>
-                    border-radius: 0.35rem;<br>
-                    max-width: 380px;<br>
-                    width: 380px;<br>
+                    position: relative;<br>
+                }<br>
+                .hoverslider .main-img img { <br>
+                    width: 100%; <br>
+                    max-width: 100%;<br>
+                    display: none;<br>
+                }<br>
+                .hoverslider .main-img img:first-child { display: block; }<br>
+                .hoverslider .content {<br>
+                    list-style: none;<br>
+                    margin: 0;<br>
+                    padding: 0;<br>
+                    width: calc(100%);<br>
+                    display: flex;<br>
+                    flex-direction: row;<br>
+                    z-index: 2;<br>
+                    position: relative;<br>
+                }<br>
+                .hoverslider .content li {<br>
                     padding: 1rem;<br>
-                    box-shadow: 0 15px 60px 0 rgba(0,0,0,0.08), 0 5px 25px 0 rgba(0,0,0,.08);<br>
-                    transition: ease box-shadow 0.3s;<br>
-                }
+                    opacity: 0.5;<br>
+                }<br>
+                .hoverslider .content li.active, .hoverslider .content li:hover {<br>
+                    opacity: 1;<br>
+                }<br>
+                .hoverslider .content li.active::before {<br>
+                    content: '';<br>
+                    display: block;<br>
+                    left: 0;<br>
+                    right: 0;<br>
+                    top: 0;<br>
+                    width: 50%;<br>
+                    bottom: 0;<br>
+                    background: #ccc;<br>
+                    position: absolute;<br>
+                    z-index: -1;<br>
+                }<br>
+                .hoverslider .content li.active:first-child::before { <br>
+                    animation: move-to-left 0.35s forwards;<br>
+                }<br>
+                .hoverslider .content li.active:nth-child(2)::before { <br>
+                    animation: move-to-right 0.35s forwards;<br>
+                }<br>
+                @keyframes move-to-right {<br>
+                    from {<br>
+                        left: 0%;<br>
+                    } <br>
+                    to {<br>
+                        left: 50%;<br>
+                    }<br>
+                }<br>
+                @keyframes move-to-left {<br>
+                    from {<br>
+                        left: 50%;<br>
+                    } <br>
+                    to {<br>
+                        left: 0%;<br>
+                    }<br>
+                }<br>
             </code>
         </div>
-        <div id="js" class="tabcontent code">
+        <div id="js1" class="tabcontent code">
             <h3>Javascrit</h3>
             <code>
-                /* skeleton */<br>
+                    var getHLtiles = Array.from(document.querySelectorAll('ul.content li'));<br>
+                    var getImgs = Array.from(document.querySelectorAll('.main-img img'));<br>
+                    getHLtiles[0].addEventListener('mouseenter', function(){<br>
+                        if(getHLtiles[1].classList.value=="active") { <br>
+                            getHLtiles[1].classList.remove('active');<br>
+                            getImgs[1].style.display='none';<br>
+                        }<br>
+                        this.classList.add('active');<br>
+                        getImgs[0].style.display='block';<br>
+                    });<br>
+                    getHLtiles[1].addEventListener('mouseenter', function(){<br>
+                        if(getHLtiles[0].classList.value=="active") { <br>
+                            getHLtiles[0].classList.remove('active');<br>
+                            getImgs[0].style.display='none';<br>
+                         }<br>
+                        this.classList.add('active');<br>
+                        getImgs[1].style.display='block';<br>
+                    });<br>
             </code>
         </div>
     </div>
